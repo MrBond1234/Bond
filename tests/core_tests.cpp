@@ -21,7 +21,7 @@ void expect(bool condition, const char* message) {
 int main() {
   bond::Application app;
   expect(app.initialize(BOND_DATA_DIR "/lessons/campaign_v1.psv"), "campaign loads");
-  expect(app.campaign().lessons().size() == 70, "campaign has seventy lessons");
+  expect(app.campaign().lessons().size() == 80, "campaign has eighty lessons");
   expect(app.start_lesson(1), "known lesson starts");
   expect(!app.start_lesson(99), "unknown lesson does not start");
   const auto lesson_15 = app.campaign().find(15);
@@ -36,6 +36,8 @@ int main() {
   expect(lesson_60 && lesson_60->required_construct == "all:std::unique_ptr,std::make_unique", "lesson sixty requires safe ownership data");
   const auto lesson_70 = app.campaign().find(70);
   expect(lesson_70 && lesson_70->required_construct == "all:template,std::sort", "lesson seventy requires template algorithm data");
+  const auto lesson_80 = app.campaign().find(80);
+  expect(lesson_80 && lesson_80->required_construct == "all:std::queue,std::priority_queue", "lesson eighty requires data structure data");
 
   const auto first = bond::generate_daily_exercise(42);
   const auto second = bond::generate_daily_exercise(42);
@@ -66,6 +68,7 @@ int main() {
   expect(localizer.text("lesson.m05.l50.title") == "ประเมิน STL สำหรับระบบอัตโนมัติ", "Thai lesson fifty exists");
   expect(localizer.text("lesson.m06.l60.title") == "ประเมินความปลอดภัยของทรัพยากร", "Thai lesson sixty exists");
   expect(localizer.text("lesson.m07.l70.title") == "ประเมินเทมเพลตและอัลกอริทึม", "Thai lesson seventy exists");
+  expect(localizer.text("lesson.m08.l80.title") == "ประเมินโครงสร้างข้อมูล", "Thai lesson eighty exists");
   expect(localizer.text("missing.key") == "missing.key", "missing localization key is visible");
   expect(localizer.load_fallback(BOND_DATA_DIR "/localization/en.psv"), "English fallback localization loads");
   expect(localizer.text("ui.status.ready") == "Worker แยกสำหรับการรันโค้ดพร้อมแล้ว โค้ดของผู้เรียนจะไม่ทำงานในโปรเซสของแอปพลิเคชัน", "Thai remains preferred over fallback");
@@ -104,6 +107,9 @@ int main() {
   const bond::Lesson template_algorithm{70, 7, "m07_l70", "", "", 1, "all:template,std::sort", "feedback.m07.l70.construct"};
   expect(!evaluator.evaluate_source(template_algorithm, "template <typename T> T first(T value) { return value; }", complete).passed, "template evaluator requires algorithm construct");
   expect(evaluator.evaluate_source(template_algorithm, "template <typename T> void order(T& value) { std::sort(value.begin(), value.end()); }", complete).passed, "template evaluator accepts template and algorithm constructs");
+  const bond::Lesson queued_priority{80, 8, "m08_l80", "", "", 1, "all:std::queue,std::priority_queue", "feedback.m08.l80.construct"};
+  expect(!evaluator.evaluate_source(queued_priority, "std::queue<int> route;", complete).passed, "data structure evaluator requires every queue type");
+  expect(evaluator.evaluate_source(queued_priority, "std::queue<int> route; std::priority_queue<int> urgent;", complete).passed, "data structure evaluator accepts combined queue types");
 
   bond::ExecutionLimits limits;
   expect(!bond::WorkerCodeExecutor::is_request_safe({"", {}}, limits), "execution rejects empty source");
