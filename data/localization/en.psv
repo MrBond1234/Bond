@@ -2,4 +2,22 @@ key|text
 app.title|Bond Automation Training
 lesson.m01.l01.title|First Harvest System
 lesson.m01.l01.requirement|Program the robot to harvest one crop and deliver it to the depot.
+lesson.m01.l02.title|Movement Counter
+lesson.m01.l02.requirement|Store the number of robot moves in an integer.
+lesson.m01.l03.title|Harvest Capacity
+lesson.m01.l03.requirement|Use arithmetic to calculate enough harvest capacity.
+lesson.m01.l04.title|Crop Check
+lesson.m01.l04.requirement|Branch when the robot is standing on a crop.
+lesson.m01.l05.title|Repeat a Route
+lesson.m01.l05.requirement|Use a for loop to repeat a fixed harvest route.
+lesson.m01.l06.title|Depot Loop
+lesson.m01.l06.requirement|Use a while loop until the depot condition is met.
+lesson.m01.l07.title|Route Function
+lesson.m01.l07.requirement|Extract a harvest route into a function.
+lesson.m01.l08.title|Required Quantity
+lesson.m01.l08.requirement|Pass the required harvest quantity as a function parameter.
+lesson.m01.l09.title|Report Status
+lesson.m01.l09.requirement|Return a status value and report a failed harvest.
+lesson.m01.l10.title|Automated Harvest Cycle
+lesson.m01.l10.requirement|Combine the fundamentals in a complete automated harvest cycle.
 daily.harvest|Daily exercise: harvest the requested quantity.

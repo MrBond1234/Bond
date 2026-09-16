@@ -2,4 +2,22 @@ key|text
 app.title|Bond Automation Training
 lesson.m01.l01.title|เริ่มต้นระบบเก็บเกี่ยว
 lesson.m01.l01.requirement|เขียนคำสั่งให้หุ่นยนต์เก็บพืช 1 หน่วยและส่งเข้าคลัง
+lesson.m01.l02.title|ตัวนับการเคลื่อนที่
+lesson.m01.l02.requirement|เก็บจำนวนครั้งที่หุ่นยนต์เคลื่อนที่ไว้ในตัวแปรจำนวนเต็ม
+lesson.m01.l03.title|ความจุการเก็บเกี่ยว
+lesson.m01.l03.requirement|ใช้เลขคณิตคำนวณความจุสำหรับการเก็บเกี่ยว
+lesson.m01.l04.title|ตรวจสอบพืช
+lesson.m01.l04.requirement|แยกเงื่อนไขเมื่อหุ่นยนต์ยืนอยู่บนพืช
+lesson.m01.l05.title|ทำเส้นทางซ้ำ
+lesson.m01.l05.requirement|ใช้ลูป for ทำเส้นทางเก็บเกี่ยวแบบคงที่ซ้ำ
+lesson.m01.l06.title|ลูปจนถึงคลัง
+lesson.m01.l06.requirement|ใช้ลูป while จนเป็นไปตามเงื่อนไขของคลัง
+lesson.m01.l07.title|ฟังก์ชันเส้นทาง
+lesson.m01.l07.requirement|แยกเส้นทางเก็บเกี่ยวออกเป็นฟังก์ชัน
+lesson.m01.l08.title|จำนวนที่ต้องการ
+lesson.m01.l08.requirement|ส่งจำนวนที่ต้องเก็บเกี่ยวเป็นพารามิเตอร์ของฟังก์ชัน
+lesson.m01.l09.title|รายงานสถานะ
+lesson.m01.l09.requirement|คืนค่าสถานะและรายงานเมื่อเก็บเกี่ยวไม่สำเร็จ
+lesson.m01.l10.title|รอบเก็บเกี่ยวอัตโนมัติ
+lesson.m01.l10.requirement|รวมพื้นฐานทั้งหมดเป็นรอบเก็บเกี่ยวอัตโนมัติที่สมบูรณ์
 daily.harvest|ภารกิจประจำวัน: เก็บเกี่ยวตามจำนวนที่กำหนด

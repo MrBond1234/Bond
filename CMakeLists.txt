@@ -9,6 +9,7 @@ add_library(bond_core
     src/application/application.cpp
     src/simulation/simulation.cpp
     src/training/campaign.cpp
+    src/localization/localizer.cpp
     src/persistence/progress_store.cpp
     src/daily/daily_exercise.cpp
 )
