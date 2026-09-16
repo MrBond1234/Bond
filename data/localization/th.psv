@@ -273,3 +273,33 @@ feedback.m09.l89.construct|ใช้ std::priority_queue สำหรับต�
 lesson.m09.l90.title|ประเมินการหาเส้นทาง
 lesson.m09.l90.requirement|ใช้ std::priority_queue และ heuristic สร้างการหาเส้นทางที่ตรวจสอบได้
 feedback.m09.l90.construct|เพิ่มทั้ง std::priority_queue และ heuristic สำหรับการประเมิน
+lesson.m10.l91.title|ขอบเขตตัววางแผนเส้นทาง
+lesson.m10.l91.requirement|ใช้ class กำหนดหน้าที่ของตัววางแผนเส้นทาง
+feedback.m10.l91.construct|เพิ่ม class สำหรับขอบเขตตัววางแผน
+lesson.m10.l92.title|การทำงานแบบนามธรรม
+lesson.m10.l92.requirement|ใช้ virtual ประกาศการทำงานของเส้นทางที่แทนที่ได้
+feedback.m10.l92.construct|เพิ่ม virtual สำหรับการทำงานแบบนามธรรม
+lesson.m10.l93.title|ตัววางแผนจริง
+lesson.m10.l93.requirement|ใช้ override สร้างตัววางแผนเส้นทางแบบเฉพาะ
+feedback.m10.l93.construct|เพิ่ม override สำหรับตัววางแผนจริง
+lesson.m10.l94.title|แฟ้มงานอัตโนมัติ
+lesson.m10.l94.requirement|ใช้ std::filesystem จัดการที่เก็บแฟ้มงานอัตโนมัติ
+feedback.m10.l94.construct|เพิ่ม std::filesystem สำหรับแฟ้มงาน
+lesson.m10.l95.title|ข้อความสำหรับผู้เรียน
+lesson.m10.l95.requirement|ใช้ Localizer ส่งข้อความผ่านชั้น localization
+feedback.m10.l95.construct|ใช้ Localizer สำหรับข้อความผู้เรียน
+lesson.m10.l96.title|บันทึกความก้าวหน้า
+lesson.m10.l96.requirement|ใช้ ProgressStore บันทึกความก้าวหน้าที่ตรวจสอบแล้ว
+feedback.m10.l96.construct|ใช้ ProgressStore สำหรับความก้าวหน้า
+lesson.m10.l97.title|ข้อยืนยันระบบ
+lesson.m10.l97.requirement|ใช้ assert ปกป้องเงื่อนไขสำคัญของระบบอัตโนมัติ
+feedback.m10.l97.construct|เพิ่ม assert สำหรับเงื่อนไขสำคัญ
+lesson.m10.l98.title|ผลลัพธ์ที่อาจไม่มีค่า
+lesson.m10.l98.requirement|ใช้ std::optional แทนผลลัพธ์เส้นทางที่อาจไม่มี
+feedback.m10.l98.construct|เพิ่ม std::optional สำหรับผลลัพธ์ที่อาจไม่มี
+lesson.m10.l99.title|ขอบเขตที่ทดสอบได้
+lesson.m10.l99.requirement|รวม class และ virtual สร้างขอบเขตระบบอัตโนมัติที่ทดสอบได้
+feedback.m10.l99.construct|เพิ่มทั้ง class และ virtual
+lesson.m10.l100.title|โครงการระบบอัตโนมัติฉบับสมบูรณ์
+lesson.m10.l100.requirement|รวม class, virtual และ override เป็นโครงการควบคุมเส้นทางฉบับสมบูรณ์
+feedback.m10.l100.construct|เพิ่ม class, virtual และ override สำหรับโครงการสุดท้าย

@@ -15,7 +15,7 @@ Every stage is 1% curriculum completion; 100% reports completion of this curricu
 | 9. Pathfinding & Optimization | 81–90 | BFS, Dijkstra, A*, heuristics, scheduling, optimization measurements |
 | 10. Software Architecture | 91–100 | interfaces, separation, testing, persistence, localization, final automation project |
 
-## v0.9 playable sequence (1–90)
+## v1.0 playable sequence (1–100)
 
 1. Start a program and issue one harvest command.
 2. Store a movement count in an integer.
@@ -107,3 +107,13 @@ Every stage is 1% curriculum completion; 100% reports completion of this curricu
 88. Combine a heuristic and distance for A*-style routing.
 89. Prioritize recovery work in a route scheduler.
 90. Complete the Module 9 pathfinding-and-optimization assessment.
+91. Define a class boundary for a route-planning responsibility.
+92. Declare a virtual route operation at the abstraction boundary.
+93. Override the route operation in a concrete planner.
+94. Persist an automation artifact through `std::filesystem`.
+95. Route learner-facing text through `Localizer`.
+96. Save verified campaign progress through `ProgressStore`.
+97. Add an assertion to protect an automation invariant.
+98. Represent an optional route result with `std::optional`.
+99. Combine a class and virtual operation into a testable automation boundary.
+100. Complete the final automation project with an interface and concrete override.
