@@ -183,3 +183,33 @@ feedback.m06.l59.construct|ใช้ std::make_unique สำหรับทร�
 lesson.m06.l60.title|ประเมินความปลอดภัยของทรัพยากร
 lesson.m06.l60.requirement|ใช้ std::unique_ptr และ std::make_unique สร้างสถานะเส้นทางที่ปลอดภัย
 feedback.m06.l60.construct|เพิ่มทั้ง std::unique_ptr และ std::make_unique สำหรับการประเมิน
+lesson.m07.l61.title|ตัวช่วยเส้นทางทั่วไป
+lesson.m07.l61.requirement|ใช้ template สร้างตัวช่วยเส้นทางที่รับชนิดข้อมูลได้หลายแบบ
+feedback.m07.l61.construct|เพิ่ม template สำหรับตัวช่วยทั่วไป
+lesson.m07.l62.title|เทมเพลตคู่สำหรับเส้นทาง
+lesson.m07.l62.requirement|ใช้ template สองชุดเพื่อแยกข้อมูลเข้าและผลลัพธ์ของเส้นทาง
+feedback.m07.l62.construct|ใช้ template สองครั้งสำหรับงานนี้
+lesson.m07.l63.title|ข้อกำหนดของตัวช่วย
+lesson.m07.l63.requirement|ใช้ requires จำกัดชนิดข้อมูลที่ใช้กับตัวช่วยอัตโนมัติ
+feedback.m07.l63.construct|เพิ่ม requires เพื่อจำกัดการใช้งานเทมเพลต
+lesson.m07.l64.title|เรียงค่าของเส้นทาง
+lesson.m07.l64.requirement|ใช้ std::sort เรียงค่าที่รอในเส้นทาง
+feedback.m07.l64.construct|ใช้ std::sort เพื่อเรียงค่าเส้นทาง
+lesson.m07.l65.title|ค้นหาค่าในเส้นทาง
+lesson.m07.l65.requirement|ใช้ std::find ค้นหาค่าที่ต้องการในเส้นทาง
+feedback.m07.l65.construct|ใช้ std::find เพื่อค้นหาค่า
+lesson.m07.l66.title|ค้นหาแบบทวิภาค
+lesson.m07.l66.requirement|ใช้ std::binary_search ตรวจค่าในเส้นทางที่เรียงแล้ว
+feedback.m07.l66.construct|ใช้ std::binary_search กับเส้นทางที่เรียงแล้ว
+lesson.m07.l67.title|ตำแหน่งเส้นทางที่เหมาะสม
+lesson.m07.l67.requirement|ใช้ std::lower_bound หาตำแหน่งแรกที่เหมาะกับงาน
+feedback.m07.l67.construct|ใช้ std::lower_bound เพื่อหาตำแหน่ง
+lesson.m07.l68.title|เรียงและค้นหาเส้นทาง
+lesson.m07.l68.requirement|รวม std::sort และ std::find เพื่อตรวจคิวเส้นทาง
+feedback.m07.l68.construct|เพิ่มทั้ง std::sort และ std::find
+lesson.m07.l69.title|เทมเพลตที่มีข้อกำหนด
+lesson.m07.l69.requirement|รวม template และ requires เพื่อสร้างตัวช่วยที่ปลอดภัยตามชนิดข้อมูล
+feedback.m07.l69.construct|เพิ่มทั้ง template และ requires
+lesson.m07.l70.title|ประเมินเทมเพลตและอัลกอริทึม
+lesson.m07.l70.requirement|รวม template และ std::sort เพื่อจัดการเส้นทางที่ตรวจสอบได้
+feedback.m07.l70.construct|เพิ่มทั้ง template และ std::sort สำหรับการประเมิน
