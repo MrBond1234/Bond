@@ -15,7 +15,7 @@ Every stage is 1% curriculum completion; 100% reports completion of this curricu
 | 9. Pathfinding & Optimization | 81–90 | BFS, Dijkstra, A*, heuristics, scheduling, optimization measurements |
 | 10. Software Architecture | 91–100 | interfaces, separation, testing, persistence, localization, final automation project |
 
-## v0.1 playable sequence (1–10)
+## v0.2 playable sequence (1–20)
 
 1. Start a program and issue one harvest command.
 2. Store a movement count in an integer.
@@ -27,3 +27,13 @@ Every stage is 1% curriculum completion; 100% reports completion of this curricu
 8. Pass required harvest quantity as a parameter.
 9. Return a status value and report failure.
 10. Combine fundamentals in a mini automated harvest cycle; this is Module 1 assessment.
+11. Use `if` to approve a harvest route.
+12. Use `else` for a safe fallback route.
+13. Combine safety conditions with `&&`.
+14. Store and use a Boolean readiness status.
+15. Select a route mode with `switch`.
+16. Handle station modes with `case`.
+17. Use `!` to stop an unsafe route.
+18. Inspect crop and depot state with conditions.
+19. Route fault recovery with `switch`.
+20. Combine conditional and switch logic in the Module 2 assessment.

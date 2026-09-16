@@ -3,7 +3,8 @@
 #include <sstream>
 
 namespace bond {
-bool Localizer::load(const std::filesystem::path& file) {
+namespace {
+bool load_entries(const std::filesystem::path& file, std::unordered_map<std::string, std::string>& destination) {
   std::ifstream input(file);
   if (!input) return false;
   std::string line;
@@ -16,12 +17,17 @@ bool Localizer::load(const std::filesystem::path& file) {
     auto [entry, inserted] = loaded.emplace(line.substr(0, separator), line.substr(separator + 1));
     if (!inserted) return false;
   }
-  entries_ = std::move(loaded);
+  destination = std::move(loaded);
   return true;
 }
+}
+bool Localizer::load(const std::filesystem::path& file) { return load_entries(file, entries_); }
+bool Localizer::load_fallback(const std::filesystem::path& file) { return load_entries(file, fallback_entries_); }
 
 std::string Localizer::text(std::string_view key) const {
   const auto found = entries_.find(std::string(key));
-  return found == entries_.end() ? std::string(key) : found->second;
+  if (found != entries_.end()) return found->second;
+  const auto fallback = fallback_entries_.find(std::string(key));
+  return fallback == fallback_entries_.end() ? std::string(key) : fallback->second;
 }
 }

@@ -1,15 +1,16 @@
 # Bond Automation Training
 
-A Windows-first C++20 learning foundation where learners automate a small harvesting robot. Version 0.1 supplies the campaign, deterministic simulation, progress format, daily-exercise seed, Thai/English lesson text, and extension points for secure execution and evaluation.
+A Windows-first C++20 automation-training simulator. Version 0.2 supplies a native engineering workbench, deterministic simulation, a Thai-first campaign through lesson 20, source-level evaluation, and a separate execution worker.
 
 ## Status
 
-This is a developer foundation, not yet a complete learner application. It deliberately does **not** compile or run untrusted learner code until a Windows sandbox is implemented.
+The workbench uses native Win32 controls to keep the dependency footprint small: simulation, C++ editor, task/requirements, output/analysis, and Run/Step/Reset controls. The UI is intentionally an IDE/PLC-style training workspace rather than a game.
 
 ## Prerequisites
 
-- CMake 3.24 or newer
+- CMake 3.24 or newer (verified with 4.4.3)
 - Visual Studio Build Tools with the **Desktop development with C++** workload
+- Windows 10 version 19045 or newer (verified on Windows 10 19045 with MSVC 19.51)
 
 Open a Visual Studio Developer PowerShell, then run:
 
