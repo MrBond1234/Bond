@@ -63,3 +63,33 @@ feedback.m02.l19.construct|Use switch for the fault response.
 lesson.m02.l20.title|Control Logic Assessment
 lesson.m02.l20.requirement|Combine conditions and switch-based routing in a verified automation cycle.
 feedback.m02.l20.construct|Use switch as part of the final control logic.
+lesson.m03.l21.title|Repeated Row Route
+lesson.m03.l21.requirement|Use for to harvest the five-crop multi-row route without repeating movement statements.
+feedback.m03.l21.construct|Use a for loop to repeat the row route.
+lesson.m03.l22.title|Inventory-Controlled Route
+lesson.m03.l22.requirement|Use while to keep processing the route until the required harvest is collected.
+feedback.m03.l22.construct|Use while for the inventory-controlled route.
+lesson.m03.l23.title|First Inspection
+lesson.m03.l23.requirement|Use do-while for an inspection that must execute before the route condition is checked.
+feedback.m03.l23.construct|Use a do-while loop for the first inspection.
+lesson.m03.l24.title|Field Sweep
+lesson.m03.l24.requirement|Use nested for loops to sweep the two-dimensional field and harvest five crops.
+feedback.m03.l24.construct|Use two for loops for the row-and-column sweep.
+lesson.m03.l25.title|Iteration Counter
+lesson.m03.l25.requirement|Use for to repeat a route while recording each harvest iteration.
+feedback.m03.l25.construct|Use a for loop for the repeated iteration.
+lesson.m03.l26.title|Blocked Point Skip
+lesson.m03.l26.requirement|Use continue to skip a blocked inspection point and proceed with the route.
+feedback.m03.l26.construct|Use continue when the inspection point is blocked.
+lesson.m03.l27.title|Extended Route
+lesson.m03.l27.requirement|Use while to process and deliver all six crops from the extended route.
+feedback.m03.l27.construct|Use while to control the extended route.
+lesson.m03.l28.title|Conditional Field Sweep
+lesson.m03.l28.requirement|Use nested for loops and a condition to sweep the six-crop field safely.
+feedback.m03.l28.construct|Use two for loops for the conditional field sweep.
+lesson.m03.l29.title|Safety Stop
+lesson.m03.l29.requirement|Use break to leave a route loop when a safety condition is reached.
+feedback.m03.l29.construct|Use break to stop the route safely.
+lesson.m03.l30.title|Iteration Assessment
+lesson.m03.l30.requirement|Use nested loops to complete the six-crop automation route and deliver it to the depot.
+feedback.m03.l30.construct|Use two for loops in the final iteration assessment.

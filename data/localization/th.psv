@@ -63,3 +63,33 @@ feedback.m02.l19.construct|ใช้ switch สำหรับการตอบ
 lesson.m02.l20.title|ประเมินตรรกะควบคุม
 lesson.m02.l20.requirement|รวมเงื่อนไขและเส้นทางแบบ switch ในรอบอัตโนมัติที่ตรวจสอบได้
 feedback.m02.l20.construct|ใช้ switch เป็นส่วนหนึ่งของตรรกะควบคุมสุดท้าย
+lesson.m03.l21.title|เส้นทางแถวซ้ำ
+lesson.m03.l21.requirement|ใช้ for เก็บพืช 5 หน่วยในเส้นทางหลายแถว โดยไม่เขียนคำสั่งเคลื่อนที่ซ้ำ
+feedback.m03.l21.construct|ใช้ลูป for เพื่อทำเส้นทางแถวซ้ำ
+lesson.m03.l22.title|เส้นทางควบคุมด้วยคลัง
+lesson.m03.l22.requirement|ใช้ while ทำเส้นทางต่อจนเก็บพืชได้ครบตามจำนวน
+feedback.m03.l22.construct|ใช้ while สำหรับเส้นทางที่ควบคุมด้วยคลัง
+lesson.m03.l23.title|ตรวจสอบครั้งแรก
+lesson.m03.l23.requirement|ใช้ do-while สำหรับการตรวจที่ต้องทำก่อนตรวจสอบเงื่อนไขเส้นทาง
+feedback.m03.l23.construct|ใช้ลูป do-while สำหรับการตรวจครั้งแรก
+lesson.m03.l24.title|กวาดพื้นที่
+lesson.m03.l24.requirement|ใช้ for ซ้อนกันเพื่อกวาดพื้นที่สองมิติและเก็บพืช 5 หน่วย
+feedback.m03.l24.construct|ใช้ for สองลูปสำหรับการกวาดแถวและคอลัมน์
+lesson.m03.l25.title|ตัวนับรอบ
+lesson.m03.l25.requirement|ใช้ for ทำเส้นทางซ้ำพร้อมบันทึกแต่ละรอบการเก็บเกี่ยว
+feedback.m03.l25.construct|ใช้ for สำหรับรอบที่ทำซ้ำ
+lesson.m03.l26.title|ข้ามจุดที่ถูกปิดกั้น
+lesson.m03.l26.requirement|ใช้ continue เพื่อข้ามจุดตรวจที่ถูกปิดกั้นและทำเส้นทางต่อ
+feedback.m03.l26.construct|ใช้ continue เมื่อจุดตรวจถูกปิดกั้น
+lesson.m03.l27.title|เส้นทางขยาย
+lesson.m03.l27.requirement|ใช้ while ประมวลผลและส่งพืชทั้ง 6 หน่วยจากเส้นทางขยายเข้าคลัง
+feedback.m03.l27.construct|ใช้ while ควบคุมเส้นทางขยาย
+lesson.m03.l28.title|กวาดพื้นที่แบบมีเงื่อนไข
+lesson.m03.l28.requirement|ใช้ for ซ้อนกันและเงื่อนไขเพื่อกวาดพื้นที่ 6 หน่วยอย่างปลอดภัย
+feedback.m03.l28.construct|ใช้ for สองลูปสำหรับการกวาดพื้นที่แบบมีเงื่อนไข
+lesson.m03.l29.title|หยุดเพื่อความปลอดภัย
+lesson.m03.l29.requirement|ใช้ break ออกจากลูปเส้นทางเมื่อถึงเงื่อนไขความปลอดภัย
+feedback.m03.l29.construct|ใช้ break เพื่อหยุดเส้นทางอย่างปลอดภัย
+lesson.m03.l30.title|ประเมินการทำซ้ำ
+lesson.m03.l30.requirement|ใช้ลูปซ้อนกันทำเส้นทางอัตโนมัติ 6 หน่วยและส่งพืชเข้าคลัง
+feedback.m03.l30.construct|ใช้ for สองลูปในการประเมินการทำซ้ำขั้นสุดท้าย

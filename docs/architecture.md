@@ -1,4 +1,4 @@
-# Architecture — v0.2
+# Architecture — v0.3
 
 `Application` coordinates the product. Its presentation host is intentionally a CLI today; a Windows UI can replace that host without owning training rules.
 
@@ -23,5 +23,7 @@ This is a training isolation boundary, not yet a hardened multi-tenant sandbox: 
 `include/bond/execution.hpp` and `include/bond/evaluation.hpp` are intentionally dependency-inverted seams: the application can depend on contracts while the Windows sandbox and individual lesson evaluators arrive incrementally. `Localizer` similarly keeps Thai/English content out of UI code.
 
 ## UI target
+
+The simulation uses a compact deterministic single-row layout for early lessons and a multi-row layout with blocked cells for five- and six-crop loop lessons. Snapshots expose successful action count and remaining crops so the UI and evaluator can report route progress without parsing UI state.
 
 The native Win32 workbench uses one engineering-style workspace: simulation grid, code editor, task/requirements, output/analysis, and Run/Step/Reset controls. It adds no large UI framework; a future WinUI 3 or Qt host can consume the same core boundaries.

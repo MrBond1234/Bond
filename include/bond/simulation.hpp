@@ -14,5 +14,6 @@ private:
   GridPosition robot_{1, 1};
   std::vector<Cell> cells_;
   int inventory_{}, harvested_{};
+  int actions_{};
 };
 }
