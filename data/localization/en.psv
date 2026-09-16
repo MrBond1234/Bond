@@ -93,3 +93,33 @@ feedback.m03.l29.construct|Use break to stop the route safely.
 lesson.m03.l30.title|Iteration Assessment
 lesson.m03.l30.requirement|Use nested loops to complete the six-crop automation route and deliver it to the depot.
 feedback.m03.l30.construct|Use two for loops in the final iteration assessment.
+lesson.m04.l31.title|Crop Navigation Helper
+lesson.m04.l31.requirement|Declare move_to_crop to isolate movement toward a crop.
+feedback.m04.l31.construct|Declare a callable move_to_crop function.
+lesson.m04.l32.title|Row Harvest Function
+lesson.m04.l32.requirement|Extract one row harvest into a reusable harvest_row function.
+feedback.m04.l32.construct|Declare a callable harvest_row function.
+lesson.m04.l33.title|Depot Delivery Function
+lesson.m04.l33.requirement|Extract depot delivery into a deliver_to_depot function.
+feedback.m04.l33.construct|Declare a callable deliver_to_depot function.
+lesson.m04.l34.title|Readiness Parameter
+lesson.m04.l34.requirement|Use route_ready to receive and check route readiness.
+feedback.m04.l34.construct|Declare a callable route_ready function.
+lesson.m04.l35.title|Route Status Return
+lesson.m04.l35.requirement|Return a route status for the main controller to inspect.
+feedback.m04.l35.construct|Add a return statement that reports status.
+lesson.m04.l36.title|Harvest Route Segment
+lesson.m04.l36.requirement|Extract the extended harvest route into a harvest_segment function.
+feedback.m04.l36.construct|Declare a callable harvest_segment function.
+lesson.m04.l37.title|Route Status Logging
+lesson.m04.l37.requirement|Use log_route_status to report automation status.
+feedback.m04.l37.construct|Declare a callable log_route_status function.
+lesson.m04.l38.title|Reusable Safe Route
+lesson.m04.l38.requirement|Combine the safety decision in a run_safe_route function.
+feedback.m04.l38.construct|Declare a callable run_safe_route function.
+lesson.m04.l39.title|Delivery Verification
+lesson.m04.l39.requirement|Use verify_delivery to report depot delivery success.
+feedback.m04.l39.construct|Declare a callable verify_delivery function.
+lesson.m04.l40.title|Automation Function Assessment
+lesson.m04.l40.requirement|Combine run_automation_cycle into a verifiable automation cycle.
+feedback.m04.l40.construct|Declare a callable run_automation_cycle function.

@@ -21,13 +21,15 @@ void expect(bool condition, const char* message) {
 int main() {
   bond::Application app;
   expect(app.initialize(BOND_DATA_DIR "/lessons/campaign_v1.psv"), "campaign loads");
-  expect(app.campaign().lessons().size() == 30, "campaign has thirty lessons");
+  expect(app.campaign().lessons().size() == 40, "campaign has forty lessons");
   expect(app.start_lesson(1), "known lesson starts");
   expect(!app.start_lesson(99), "unknown lesson does not start");
   const auto lesson_15 = app.campaign().find(15);
   expect(lesson_15 && lesson_15->required_construct == "switch", "lesson fifteen has data-driven switch requirement");
   const auto lesson_30 = app.campaign().find(30);
   expect(lesson_30 && lesson_30->required_construct == "for*2", "lesson thirty requires nested loop data");
+  const auto lesson_40 = app.campaign().find(40);
+  expect(lesson_40 && lesson_40->required_construct == "function:run_automation_cycle", "lesson forty requires data-driven function name");
 
   const auto first = bond::generate_daily_exercise(42);
   const auto second = bond::generate_daily_exercise(42);
@@ -54,6 +56,7 @@ int main() {
   expect(localizer.text("lesson.m01.l10.title") == "รอบเก็บเกี่ยวอัตโนมัติ", "Thai lesson ten exists");
   expect(localizer.text("lesson.m02.l20.title") == "ประเมินตรรกะควบคุม", "Thai lesson twenty exists");
   expect(localizer.text("lesson.m03.l30.title") == "ประเมินการทำซ้ำ", "Thai lesson thirty exists");
+  expect(localizer.text("lesson.m04.l40.title") == "ประเมินฟังก์ชันอัตโนมัติ", "Thai lesson forty exists");
   expect(localizer.text("missing.key") == "missing.key", "missing localization key is visible");
   expect(localizer.load_fallback(BOND_DATA_DIR "/localization/en.psv"), "English fallback localization loads");
   expect(localizer.text("ui.status.ready") == "Worker แยกสำหรับการรันโค้ดพร้อมแล้ว โค้ดของผู้เรียนจะไม่ทำงานในโปรเซสของแอปพลิเคชัน", "Thai remains preferred over fallback");
@@ -80,6 +83,9 @@ int main() {
   const bond::Lesson nested{30, 3, "m03_l30", "", "", 1, "for*2", "feedback.m03.l30.construct"};
   expect(!evaluator.evaluate_source(nested, "for (;;) {}", complete).passed, "nested evaluator rejects a single loop");
   expect(evaluator.evaluate_source(nested, "for (;;) { for (;;) {} }", complete).passed, "nested evaluator accepts two loops");
+  const bond::Lesson named_function{31, 4, "m04_l31", "", "", 1, "function:move_to_crop", "feedback.m04.l31.construct"};
+  expect(!evaluator.evaluate_source(named_function, "void move_to_cropper() {}", complete).passed, "function evaluator requires the configured function name");
+  expect(evaluator.evaluate_source(named_function, "void move_to_crop(int row) {}", complete).passed, "function evaluator accepts a configured function declaration");
 
   bond::ExecutionLimits limits;
   expect(!bond::WorkerCodeExecutor::is_request_safe({"", {}}, limits), "execution rejects empty source");

@@ -93,3 +93,33 @@ feedback.m03.l29.construct|ใช้ break เพื่อหยุดเส้�
 lesson.m03.l30.title|ประเมินการทำซ้ำ
 lesson.m03.l30.requirement|ใช้ลูปซ้อนกันทำเส้นทางอัตโนมัติ 6 หน่วยและส่งพืชเข้าคลัง
 feedback.m03.l30.construct|ใช้ for สองลูปในการประเมินการทำซ้ำขั้นสุดท้าย
+lesson.m04.l31.title|ตัวช่วยไปยังพืช
+lesson.m04.l31.requirement|ประกาศฟังก์ชัน move_to_crop เพื่อแยกการเคลื่อนที่ไปยังพืช
+feedback.m04.l31.construct|ประกาศฟังก์ชัน move_to_crop ที่เรียกใช้ได้
+lesson.m04.l32.title|ฟังก์ชันเก็บเกี่ยวแถว
+lesson.m04.l32.requirement|แยกการเก็บเกี่ยวหนึ่งแถวเป็นฟังก์ชัน harvest_row ที่ใช้ซ้ำได้
+feedback.m04.l32.construct|ประกาศฟังก์ชัน harvest_row ที่เรียกใช้ได้
+lesson.m04.l33.title|ฟังก์ชันส่งเข้าคลัง
+lesson.m04.l33.requirement|แยกขั้นตอนส่งพืชเข้าคลังเป็นฟังก์ชัน deliver_to_depot
+feedback.m04.l33.construct|ประกาศฟังก์ชัน deliver_to_depot ที่เรียกใช้ได้
+lesson.m04.l34.title|พารามิเตอร์ความพร้อม
+lesson.m04.l34.requirement|ใช้ฟังก์ชัน route_ready เพื่อรับและตรวจความพร้อมของเส้นทาง
+feedback.m04.l34.construct|ประกาศฟังก์ชัน route_ready ที่เรียกใช้ได้
+lesson.m04.l35.title|คืนสถานะเส้นทาง
+lesson.m04.l35.requirement|คืนค่าสถานะของเส้นทางให้ส่วนควบคุมหลักตรวจสอบ
+feedback.m04.l35.construct|เพิ่มคำสั่ง return เพื่อส่งสถานะกลับ
+lesson.m04.l36.title|ส่วนเส้นทางเก็บเกี่ยว
+lesson.m04.l36.requirement|แยกเส้นทางเก็บเกี่ยวขยายเป็นฟังก์ชัน harvest_segment
+feedback.m04.l36.construct|ประกาศฟังก์ชัน harvest_segment ที่เรียกใช้ได้
+lesson.m04.l37.title|บันทึกสถานะเส้นทาง
+lesson.m04.l37.requirement|ใช้ฟังก์ชัน log_route_status เพื่อรายงานสถานะการทำงาน
+feedback.m04.l37.construct|ประกาศฟังก์ชัน log_route_status ที่เรียกใช้ได้
+lesson.m04.l38.title|เส้นทางปลอดภัยแบบใช้ซ้ำ
+lesson.m04.l38.requirement|รวมการตัดสินใจด้านความปลอดภัยในฟังก์ชัน run_safe_route
+feedback.m04.l38.construct|ประกาศฟังก์ชัน run_safe_route ที่เรียกใช้ได้
+lesson.m04.l39.title|ตรวจยืนยันการส่ง
+lesson.m04.l39.requirement|ใช้ฟังก์ชัน verify_delivery เพื่อรายงานผลการส่งเข้าคลัง
+feedback.m04.l39.construct|ประกาศฟังก์ชัน verify_delivery ที่เรียกใช้ได้
+lesson.m04.l40.title|ประเมินฟังก์ชันอัตโนมัติ
+lesson.m04.l40.requirement|รวมฟังก์ชัน run_automation_cycle เป็นรอบอัตโนมัติที่ตรวจสอบได้
+feedback.m04.l40.construct|ประกาศฟังก์ชัน run_automation_cycle ที่เรียกใช้ได้

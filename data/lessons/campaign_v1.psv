@@ -29,3 +29,13 @@ id|module|key|title_key|requirement_key|target_harvest|required_construct|feedba
 28|3|m03_l28|lesson.m03.l28.title|lesson.m03.l28.requirement|6|for*2|feedback.m03.l28.construct
 29|3|m03_l29|lesson.m03.l29.title|lesson.m03.l29.requirement|6|break|feedback.m03.l29.construct
 30|3|m03_l30|lesson.m03.l30.title|lesson.m03.l30.requirement|6|for*2|feedback.m03.l30.construct
+31|4|m04_l31|lesson.m04.l31.title|lesson.m04.l31.requirement|5|function:move_to_crop|feedback.m04.l31.construct
+32|4|m04_l32|lesson.m04.l32.title|lesson.m04.l32.requirement|5|function:harvest_row|feedback.m04.l32.construct
+33|4|m04_l33|lesson.m04.l33.title|lesson.m04.l33.requirement|5|function:deliver_to_depot|feedback.m04.l33.construct
+34|4|m04_l34|lesson.m04.l34.title|lesson.m04.l34.requirement|5|function:route_ready|feedback.m04.l34.construct
+35|4|m04_l35|lesson.m04.l35.title|lesson.m04.l35.requirement|5|return|feedback.m04.l35.construct
+36|4|m04_l36|lesson.m04.l36.title|lesson.m04.l36.requirement|6|function:harvest_segment|feedback.m04.l36.construct
+37|4|m04_l37|lesson.m04.l37.title|lesson.m04.l37.requirement|6|function:log_route_status|feedback.m04.l37.construct
+38|4|m04_l38|lesson.m04.l38.title|lesson.m04.l38.requirement|6|function:run_safe_route|feedback.m04.l38.construct
+39|4|m04_l39|lesson.m04.l39.title|lesson.m04.l39.requirement|6|function:verify_delivery|feedback.m04.l39.construct
+40|4|m04_l40|lesson.m04.l40.title|lesson.m04.l40.requirement|6|function:run_automation_cycle|feedback.m04.l40.construct
