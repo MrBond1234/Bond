@@ -243,3 +243,33 @@ feedback.m08.l79.construct|ใช้ std::priority_queue สำหรับก�
 lesson.m08.l80.title|ประเมินโครงสร้างข้อมูล
 lesson.m08.l80.requirement|ใช้ std::queue และ std::priority_queue สร้างระบบส่งงานเส้นทางที่ตรวจสอบได้
 feedback.m08.l80.construct|เพิ่มทั้ง std::queue และ std::priority_queue สำหรับการประเมิน
+lesson.m09.l81.title|แนวหน้าการค้นหาแบบกว้าง
+lesson.m09.l81.requirement|ใช้ std::queue เป็นแนวหน้าสำหรับค้นหาเส้นทางแบบกว้าง
+feedback.m09.l81.construct|เพิ่ม std::queue สำหรับแนวหน้าการค้นหา
+lesson.m09.l82.title|แนวหน้าต้นทุนต่ำ
+lesson.m09.l82.requirement|ใช้ std::priority_queue จัดลำดับแนวหน้าตามต้นทุนเส้นทาง
+feedback.m09.l82.construct|เพิ่ม std::priority_queue สำหรับต้นทุนเส้นทาง
+lesson.m09.l83.title|ค่าประมาณเส้นทาง
+lesson.m09.l83.requirement|สร้าง heuristic เพื่อประมาณต้นทุนที่เหลือถึงเป้าหมาย
+feedback.m09.l83.construct|เพิ่มตัวแปรหรือฟังก์ชัน heuristic
+lesson.m09.l84.title|ระยะทางเส้นทาง
+lesson.m09.l84.requirement|ติดตาม distance ขณะขยายการค้นหาเส้นทาง
+feedback.m09.l84.construct|เพิ่มการติดตาม distance
+lesson.m09.l85.title|ต้นทุนที่ยังไม่ทราบ
+lesson.m09.l85.requirement|ใช้ std::numeric_limits กำหนดต้นทุนเริ่มต้นที่ปลอดภัย
+feedback.m09.l85.construct|ใช้ std::numeric_limits สำหรับต้นทุนเริ่มต้น
+lesson.m09.l86.title|ค้นหาแบบกว้างพร้อมระยะทาง
+lesson.m09.l86.requirement|รวม std::queue และ distance เพื่อหาเส้นทางแบบกว้าง
+feedback.m09.l86.construct|เพิ่มทั้ง std::queue และ distance
+lesson.m09.l87.title|เส้นทางต้นทุนต่ำสุด
+lesson.m09.l87.requirement|รวม std::priority_queue และ distance เพื่อจัดการเส้นทางแบบ Dijkstra
+feedback.m09.l87.construct|เพิ่มทั้ง std::priority_queue และ distance
+lesson.m09.l88.title|เส้นทางพร้อมค่าประมาณ
+lesson.m09.l88.requirement|รวม heuristic และ distance เพื่อจัดการเส้นทางแบบ A*
+feedback.m09.l88.construct|เพิ่มทั้ง heuristic และ distance
+lesson.m09.l89.title|กำหนดตารางกู้คืน
+lesson.m09.l89.requirement|ใช้ std::priority_queue จัดลำดับงานกู้คืนเส้นทาง
+feedback.m09.l89.construct|ใช้ std::priority_queue สำหรับตารางกู้คืน
+lesson.m09.l90.title|ประเมินการหาเส้นทาง
+lesson.m09.l90.requirement|ใช้ std::priority_queue และ heuristic สร้างการหาเส้นทางที่ตรวจสอบได้
+feedback.m09.l90.construct|เพิ่มทั้ง std::priority_queue และ heuristic สำหรับการประเมิน

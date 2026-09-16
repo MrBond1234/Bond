@@ -243,3 +243,33 @@ feedback.m08.l79.construct|Use std::priority_queue for recovery.
 lesson.m08.l80.title|Data Structures Assessment
 lesson.m08.l80.requirement|Use std::queue and std::priority_queue for verifiable route dispatch.
 feedback.m08.l80.construct|Add both std::queue and std::priority_queue for the assessment.
+lesson.m09.l81.title|Breadth-First Frontier
+lesson.m09.l81.requirement|Use std::queue as a frontier for breadth-first route search.
+feedback.m09.l81.construct|Add std::queue for the search frontier.
+lesson.m09.l82.title|Lowest-Cost Frontier
+lesson.m09.l82.requirement|Use std::priority_queue to order the route frontier by cost.
+feedback.m09.l82.construct|Add std::priority_queue for route cost.
+lesson.m09.l83.title|Route Estimate
+lesson.m09.l83.requirement|Create a heuristic to estimate remaining goal cost.
+feedback.m09.l83.construct|Add a heuristic variable or helper.
+lesson.m09.l84.title|Route Distance
+lesson.m09.l84.requirement|Track distance while expanding the route search.
+feedback.m09.l84.construct|Add distance tracking.
+lesson.m09.l85.title|Unknown Cost
+lesson.m09.l85.requirement|Use std::numeric_limits to set a safe initial unknown cost.
+feedback.m09.l85.construct|Use std::numeric_limits for initial cost.
+lesson.m09.l86.title|Breadth-First Distance
+lesson.m09.l86.requirement|Combine std::queue and distance for breadth-first routing.
+feedback.m09.l86.construct|Add both std::queue and distance.
+lesson.m09.l87.title|Lowest-Cost Routing
+lesson.m09.l87.requirement|Combine std::priority_queue and distance for Dijkstra-style routing.
+feedback.m09.l87.construct|Add both std::priority_queue and distance.
+lesson.m09.l88.title|Estimated Routing
+lesson.m09.l88.requirement|Combine heuristic and distance for A*-style routing.
+feedback.m09.l88.construct|Add both heuristic and distance.
+lesson.m09.l89.title|Recovery Scheduler
+lesson.m09.l89.requirement|Use std::priority_queue to order route recovery work.
+feedback.m09.l89.construct|Use std::priority_queue for recovery scheduling.
+lesson.m09.l90.title|Pathfinding Assessment
+lesson.m09.l90.requirement|Use std::priority_queue and heuristic for verifiable pathfinding.
+feedback.m09.l90.construct|Add both std::priority_queue and heuristic for the assessment.
