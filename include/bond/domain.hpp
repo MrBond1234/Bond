@@ -7,7 +7,7 @@ namespace bond {
 struct GridPosition { int x{}; int y{}; friend bool operator==(GridPosition, GridPosition) = default; };
 enum class Cell { empty, crop, wall, depot };
 enum class Command { move_north, move_south, move_west, move_east, harvest, deposit };
-struct SimulationSnapshot { GridPosition robot; int inventory{}; int harvested{}; bool complete{}; };
+struct SimulationSnapshot { GridPosition robot; int inventory{}; int harvested{}; bool complete{}; int actions{}; int remaining_crops{}; };
 struct Lesson {
   int id{};
   int module{};

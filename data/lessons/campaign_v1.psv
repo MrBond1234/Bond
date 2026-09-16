@@ -19,3 +19,13 @@ id|module|key|title_key|requirement_key|target_harvest|required_construct|feedba
 18|2|m02_l18|lesson.m02.l18.title|lesson.m02.l18.requirement|3|if|feedback.m02.l18.construct
 19|2|m02_l19|lesson.m02.l19.title|lesson.m02.l19.requirement|4|switch|feedback.m02.l19.construct
 20|2|m02_l20|lesson.m02.l20.title|lesson.m02.l20.requirement|4|switch|feedback.m02.l20.construct
+21|3|m03_l21|lesson.m03.l21.title|lesson.m03.l21.requirement|5|for|feedback.m03.l21.construct
+22|3|m03_l22|lesson.m03.l22.title|lesson.m03.l22.requirement|5|while|feedback.m03.l22.construct
+23|3|m03_l23|lesson.m03.l23.title|lesson.m03.l23.requirement|5|do|feedback.m03.l23.construct
+24|3|m03_l24|lesson.m03.l24.title|lesson.m03.l24.requirement|5|for*2|feedback.m03.l24.construct
+25|3|m03_l25|lesson.m03.l25.title|lesson.m03.l25.requirement|5|for|feedback.m03.l25.construct
+26|3|m03_l26|lesson.m03.l26.title|lesson.m03.l26.requirement|5|continue|feedback.m03.l26.construct
+27|3|m03_l27|lesson.m03.l27.title|lesson.m03.l27.requirement|6|while|feedback.m03.l27.construct
+28|3|m03_l28|lesson.m03.l28.title|lesson.m03.l28.requirement|6|for*2|feedback.m03.l28.construct
+29|3|m03_l29|lesson.m03.l29.title|lesson.m03.l29.requirement|6|break|feedback.m03.l29.construct
+30|3|m03_l30|lesson.m03.l30.title|lesson.m03.l30.requirement|6|for*2|feedback.m03.l30.construct

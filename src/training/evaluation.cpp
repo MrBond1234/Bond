@@ -1,10 +1,20 @@
 #include "bond/evaluation.hpp"
+#include <charconv>
 #include <string_view>
 
 namespace bond {
 namespace {
 bool contains_construct(std::string_view source, std::string_view construct) {
-  return construct.empty() || source.find(construct) != std::string_view::npos;
+  if (construct.empty()) return true;
+  const auto separator = construct.rfind('*');
+  if (separator == std::string_view::npos) return source.find(construct) != std::string_view::npos;
+  int required{};
+  const auto count_text = construct.substr(separator + 1);
+  const auto [end, error] = std::from_chars(count_text.data(), count_text.data() + count_text.size(), required);
+  if (error != std::errc{} || end != count_text.data() + count_text.size() || required < 1) return false;
+  const auto token = construct.substr(0, separator); int occurrences{}; std::size_t position{};
+  while ((position = source.find(token, position)) != std::string_view::npos) { ++occurrences; position += token.size(); }
+  return occurrences >= required;
 }
 }
 
