@@ -21,3 +21,45 @@ lesson.m01.l09.requirement|Return a status value and report a failed harvest.
 lesson.m01.l10.title|Automated Harvest Cycle
 lesson.m01.l10.requirement|Combine the fundamentals in a complete automated harvest cycle.
 daily.harvest|Daily exercise: harvest the requested quantity.
+ui.simulation|SIMULATION
+ui.code_editor|C++ CODE EDITOR
+ui.task|TASK & REQUIREMENTS
+ui.output|OUTPUT & ANALYSIS
+ui.run|Run
+ui.step|Step
+ui.reset|Reset
+ui.status.ready|The isolated execution worker is ready. Learner code never runs inside this application process.
+ui.status.no_output|The worker completed without diagnostic output.
+ui.status.stepped|Simulation advanced by one engineering step.
+ui.status.reset|Lesson simulation reset.
+feedback.none|Review the task requirements and run the simulation again.
+feedback.simulation.incomplete|The simulation has not delivered the required harvest to the depot.
+lesson.m02.l11.title|Decision Gate
+lesson.m02.l11.requirement|Use if to dispatch a harvest route only when a crop is detected.
+feedback.m02.l11.construct|Add an if statement that guards the crop decision.
+lesson.m02.l12.title|Fallback Route
+lesson.m02.l12.requirement|Use else to select a safe route when the crop condition is false.
+feedback.m02.l12.construct|Add an else branch for the fallback route.
+lesson.m02.l13.title|Safe Harvest Condition
+lesson.m02.l13.requirement|Combine crop and capacity checks with Boolean AND.
+feedback.m02.l13.construct|Combine both conditions with &&.
+lesson.m02.l14.title|Boolean Status
+lesson.m02.l14.requirement|Store and use a Boolean readiness status before moving the robot.
+lesson.m02.l15.title|Route Selector
+lesson.m02.l15.requirement|Use switch to select an approved route mode.
+feedback.m02.l15.construct|Use switch to select the route mode.
+lesson.m02.l16.title|Station Cases
+lesson.m02.l16.requirement|Handle each station mode with a case label.
+feedback.m02.l16.construct|Add a case label for the selected station mode.
+lesson.m02.l17.title|Safety Inversion
+lesson.m02.l17.requirement|Use Boolean negation to stop an unsafe route.
+feedback.m02.l17.construct|Use ! to express the unsafe condition.
+lesson.m02.l18.title|Nested Inspection
+lesson.m02.l18.requirement|Use a nested condition to inspect crop and depot state.
+feedback.m02.l18.construct|Add an if condition for the inspection step.
+lesson.m02.l19.title|Fault Response
+lesson.m02.l19.requirement|Use switch to report a route fault and choose recovery.
+feedback.m02.l19.construct|Use switch for the fault response.
+lesson.m02.l20.title|Control Logic Assessment
+lesson.m02.l20.requirement|Combine conditions and switch-based routing in a verified automation cycle.
+feedback.m02.l20.construct|Use switch as part of the final control logic.

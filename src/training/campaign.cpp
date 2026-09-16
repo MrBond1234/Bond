@@ -13,7 +13,7 @@ bool Campaign::load(const std::filesystem::path& file) {
   std::ifstream input(file);
   if (!input) return false;
   std::string line;
-  if (!std::getline(input, line) || line != "id|module|key|title_key|requirement_key|target_harvest") return false;
+  if (!std::getline(input, line) || line != "id|module|key|title_key|requirement_key|target_harvest|required_construct|feedback_key") return false;
   std::vector<Lesson> loaded;
   while (std::getline(input, line)) {
     if (line.empty()) continue;
@@ -21,7 +21,7 @@ bool Campaign::load(const std::filesystem::path& file) {
     std::vector<std::string> fields;
     std::string field;
     while (std::getline(row, field, '|')) fields.push_back(std::move(field));
-    if (fields.size() != 6) return false;
+    if (fields.size() != 8) return false;
     Lesson lesson;
     if (!parse_int(fields[0], lesson.id) || !parse_int(fields[1], lesson.module) ||
         !parse_int(fields[5], lesson.target_harvest) || lesson.id <= 0 || lesson.module <= 0 ||
@@ -29,6 +29,8 @@ bool Campaign::load(const std::filesystem::path& file) {
     lesson.key = std::move(fields[2]);
     lesson.title_key = std::move(fields[3]);
     lesson.requirement_key = std::move(fields[4]);
+    lesson.required_construct = std::move(fields[6]);
+    lesson.feedback_key = std::move(fields[7]);
     for (const auto& existing : loaded) if (existing.id == lesson.id) return false;
     loaded.push_back(std::move(lesson));
   }
