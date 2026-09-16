@@ -21,9 +21,9 @@ void expect(bool condition, const char* message) {
 int main() {
   bond::Application app;
   expect(app.initialize(BOND_DATA_DIR "/lessons/campaign_v1.psv"), "campaign loads");
-  expect(app.campaign().lessons().size() == 90, "campaign has ninety lessons");
+  expect(app.campaign().lessons().size() == 100, "campaign has one hundred lessons");
   expect(app.start_lesson(1), "known lesson starts");
-  expect(!app.start_lesson(99), "unknown lesson does not start");
+  expect(!app.start_lesson(101), "unknown lesson does not start");
   const auto lesson_15 = app.campaign().find(15);
   expect(lesson_15 && lesson_15->required_construct == "switch", "lesson fifteen has data-driven switch requirement");
   const auto lesson_30 = app.campaign().find(30);
@@ -40,6 +40,8 @@ int main() {
   expect(lesson_80 && lesson_80->required_construct == "all:std::queue,std::priority_queue", "lesson eighty requires data structure data");
   const auto lesson_90 = app.campaign().find(90);
   expect(lesson_90 && lesson_90->required_construct == "all:std::priority_queue,heuristic", "lesson ninety requires pathfinding data");
+  const auto lesson_100 = app.campaign().find(100);
+  expect(lesson_100 && lesson_100->required_construct == "all:class,virtual,override", "lesson one hundred requires architecture data");
 
   const auto first = bond::generate_daily_exercise(42);
   const auto second = bond::generate_daily_exercise(42);
@@ -72,6 +74,7 @@ int main() {
   expect(localizer.text("lesson.m07.l70.title") == "ประเมินเทมเพลตและอัลกอริทึม", "Thai lesson seventy exists");
   expect(localizer.text("lesson.m08.l80.title") == "ประเมินโครงสร้างข้อมูล", "Thai lesson eighty exists");
   expect(localizer.text("lesson.m09.l90.title") == "ประเมินการหาเส้นทาง", "Thai lesson ninety exists");
+  expect(localizer.text("lesson.m10.l100.title") == "โครงการระบบอัตโนมัติฉบับสมบูรณ์", "Thai lesson one hundred exists");
   expect(localizer.text("missing.key") == "missing.key", "missing localization key is visible");
   expect(localizer.load_fallback(BOND_DATA_DIR "/localization/en.psv"), "English fallback localization loads");
   expect(localizer.text("ui.status.ready") == "Worker แยกสำหรับการรันโค้ดพร้อมแล้ว โค้ดของผู้เรียนจะไม่ทำงานในโปรเซสของแอปพลิเคชัน", "Thai remains preferred over fallback");
@@ -116,6 +119,9 @@ int main() {
   const bond::Lesson pathfinding{90, 9, "m09_l90", "", "", 1, "all:std::priority_queue,heuristic", "feedback.m09.l90.construct"};
   expect(!evaluator.evaluate_source(pathfinding, "std::priority_queue<int> frontier;", complete).passed, "pathfinding evaluator requires a heuristic");
   expect(evaluator.evaluate_source(pathfinding, "std::priority_queue<int> frontier; int heuristic = 0;", complete).passed, "pathfinding evaluator accepts frontier and heuristic");
+  const bond::Lesson architecture{100, 10, "m10_l100", "", "", 1, "all:class,virtual,override", "feedback.m10.l100.construct"};
+  expect(!evaluator.evaluate_source(architecture, "class RoutePlanner { virtual void run(); };", complete).passed, "architecture evaluator requires implementation override");
+  expect(evaluator.evaluate_source(architecture, "class RoutePlanner { virtual void run(); }; class SafePlanner : public RoutePlanner { void run() override {} };", complete).passed, "architecture evaluator accepts an interface and override");
 
   bond::ExecutionLimits limits;
   expect(!bond::WorkerCodeExecutor::is_request_safe({"", {}}, limits), "execution rejects empty source");

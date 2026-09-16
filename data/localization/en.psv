@@ -273,3 +273,33 @@ feedback.m09.l89.construct|Use std::priority_queue for recovery scheduling.
 lesson.m09.l90.title|Pathfinding Assessment
 lesson.m09.l90.requirement|Use std::priority_queue and heuristic for verifiable pathfinding.
 feedback.m09.l90.construct|Add both std::priority_queue and heuristic for the assessment.
+lesson.m10.l91.title|Route Planner Boundary
+lesson.m10.l91.requirement|Use class to define the route-planner responsibility.
+feedback.m10.l91.construct|Add class for the planner boundary.
+lesson.m10.l92.title|Abstract Route Operation
+lesson.m10.l92.requirement|Use virtual to declare a replaceable route operation.
+feedback.m10.l92.construct|Add virtual for the abstract operation.
+lesson.m10.l93.title|Concrete Planner
+lesson.m10.l93.requirement|Use override to create a concrete route planner.
+feedback.m10.l93.construct|Add override for the concrete planner.
+lesson.m10.l94.title|Automation Artifact
+lesson.m10.l94.requirement|Use std::filesystem to manage an automation artifact location.
+feedback.m10.l94.construct|Add std::filesystem for the artifact.
+lesson.m10.l95.title|Learner-Facing Text
+lesson.m10.l95.requirement|Use Localizer to route text through the localization layer.
+feedback.m10.l95.construct|Use Localizer for learner-facing text.
+lesson.m10.l96.title|Progress Persistence
+lesson.m10.l96.requirement|Use ProgressStore to save verified campaign progress.
+feedback.m10.l96.construct|Use ProgressStore for progress.
+lesson.m10.l97.title|Automation Invariant
+lesson.m10.l97.requirement|Use assert to protect an automation invariant.
+feedback.m10.l97.construct|Add assert for the invariant.
+lesson.m10.l98.title|Optional Route Result
+lesson.m10.l98.requirement|Use std::optional to represent a route result that may be absent.
+feedback.m10.l98.construct|Add std::optional for the optional result.
+lesson.m10.l99.title|Testable Boundary
+lesson.m10.l99.requirement|Combine class and virtual into a testable automation boundary.
+feedback.m10.l99.construct|Add both class and virtual.
+lesson.m10.l100.title|Complete Automation Project
+lesson.m10.l100.requirement|Combine class, virtual, and override into a complete route-control project.
+feedback.m10.l100.construct|Add class, virtual, and override for the final project.

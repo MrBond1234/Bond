@@ -89,3 +89,13 @@ id|module|key|title_key|requirement_key|target_harvest|required_construct|feedba
 88|9|m09_l88|lesson.m09.l88.title|lesson.m09.l88.requirement|6|all:heuristic,distance|feedback.m09.l88.construct
 89|9|m09_l89|lesson.m09.l89.title|lesson.m09.l89.requirement|6|std::priority_queue|feedback.m09.l89.construct
 90|9|m09_l90|lesson.m09.l90.title|lesson.m09.l90.requirement|6|all:std::priority_queue,heuristic|feedback.m09.l90.construct
+91|10|m10_l91|lesson.m10.l91.title|lesson.m10.l91.requirement|5|class|feedback.m10.l91.construct
+92|10|m10_l92|lesson.m10.l92.title|lesson.m10.l92.requirement|5|virtual|feedback.m10.l92.construct
+93|10|m10_l93|lesson.m10.l93.title|lesson.m10.l93.requirement|5|override|feedback.m10.l93.construct
+94|10|m10_l94|lesson.m10.l94.title|lesson.m10.l94.requirement|5|std::filesystem|feedback.m10.l94.construct
+95|10|m10_l95|lesson.m10.l95.title|lesson.m10.l95.requirement|5|Localizer|feedback.m10.l95.construct
+96|10|m10_l96|lesson.m10.l96.title|lesson.m10.l96.requirement|6|ProgressStore|feedback.m10.l96.construct
+97|10|m10_l97|lesson.m10.l97.title|lesson.m10.l97.requirement|6|assert|feedback.m10.l97.construct
+98|10|m10_l98|lesson.m10.l98.title|lesson.m10.l98.requirement|6|std::optional|feedback.m10.l98.construct
+99|10|m10_l99|lesson.m10.l99.title|lesson.m10.l99.requirement|6|all:class,virtual|feedback.m10.l99.construct
+100|10|m10_l100|lesson.m10.l100.title|lesson.m10.l100.requirement|6|all:class,virtual,override|feedback.m10.l100.construct
