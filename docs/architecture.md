@@ -1,4 +1,4 @@
-# Architecture — v0.3
+# Architecture — v0.4
 
 `Application` coordinates the product. Its presentation host is intentionally a CLI today; a Windows UI can replace that host without owning training rules.
 
@@ -20,7 +20,7 @@ Data is versioned separately from C++ under `data/`. `campaign_v1.psv` is delibe
 
 This is a training isolation boundary, not yet a hardened multi-tenant sandbox: restricted-token/AppContainer, explicit filesystem ACLs, network denial, asynchronous pipe draining, compiler allow-list configuration, and malware scanning remain required before exposing it outside a trusted managed-training machine.
 
-`include/bond/execution.hpp` and `include/bond/evaluation.hpp` are intentionally dependency-inverted seams: the application can depend on contracts while the Windows sandbox and individual lesson evaluators arrive incrementally. `Localizer` similarly keeps Thai/English content out of UI code.
+`include/bond/execution.hpp` and `include/bond/evaluation.hpp` are intentionally dependency-inverted seams: the application can depend on contracts while the Windows sandbox and individual lesson evaluators arrive incrementally. The evaluator also understands `function:<name>` campaign requirements, which require a matching callable identifier before simulation scoring. It remains a deliberately small source inspection rather than a compiler or AST parser. `Localizer` similarly keeps Thai/English content out of UI code.
 
 ## UI target
 

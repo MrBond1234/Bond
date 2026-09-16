@@ -1,6 +1,6 @@
 # Bond Automation Training
 
-A Windows-first C++20 automation-training simulator. Version 0.3 supplies a native engineering workbench, deterministic multi-row simulation, a Thai-first campaign through lesson 30, source-level evaluation, and a separate execution worker.
+A Windows-first C++20 automation-training simulator. Version 0.4 supplies a native engineering workbench, deterministic multi-row simulation, a Thai-first campaign through lesson 40, source-level evaluation, and a separate execution worker.
 
 ## Status
 

@@ -1,11 +1,25 @@
 #include "bond/evaluation.hpp"
 #include <charconv>
+#include <cctype>
 #include <string_view>
 
 namespace bond {
 namespace {
 bool contains_construct(std::string_view source, std::string_view construct) {
   if (construct.empty()) return true;
+  constexpr std::string_view function_prefix{"function:"};
+  if (construct.starts_with(function_prefix)) {
+    const auto name = construct.substr(function_prefix.size());
+    std::size_t position{};
+    while ((position = source.find(name, position)) != std::string_view::npos) {
+      const bool left_boundary = position == 0 || !(std::isalnum(static_cast<unsigned char>(source[position - 1])) || source[position - 1] == '_');
+      auto after_name = position + name.size();
+      while (after_name < source.size() && std::isspace(static_cast<unsigned char>(source[after_name]))) ++after_name;
+      if (left_boundary && after_name < source.size() && source[after_name] == '(') return true;
+      position += name.size();
+    }
+    return false;
+  }
   const auto separator = construct.rfind('*');
   if (separator == std::string_view::npos) return source.find(construct) != std::string_view::npos;
   int required{};
