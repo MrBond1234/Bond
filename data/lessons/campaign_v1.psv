@@ -39,3 +39,13 @@ id|module|key|title_key|requirement_key|target_harvest|required_construct|feedba
 38|4|m04_l38|lesson.m04.l38.title|lesson.m04.l38.requirement|6|function:run_safe_route|feedback.m04.l38.construct
 39|4|m04_l39|lesson.m04.l39.title|lesson.m04.l39.requirement|6|function:verify_delivery|feedback.m04.l39.construct
 40|4|m04_l40|lesson.m04.l40.title|lesson.m04.l40.requirement|6|function:run_automation_cycle|feedback.m04.l40.construct
+41|5|m05_l41|lesson.m05.l41.title|lesson.m05.l41.requirement|5|std::vector|feedback.m05.l41.construct
+42|5|m05_l42|lesson.m05.l42.title|lesson.m05.l42.requirement|5|std::vector*2|feedback.m05.l42.construct
+43|5|m05_l43|lesson.m05.l43.title|lesson.m05.l43.requirement|5|std::string|feedback.m05.l43.construct
+44|5|m05_l44|lesson.m05.l44.title|lesson.m05.l44.requirement|5|std::map|feedback.m05.l44.construct
+45|5|m05_l45|lesson.m05.l45.title|lesson.m05.l45.requirement|5|std::find|feedback.m05.l45.construct
+46|5|m05_l46|lesson.m05.l46.title|lesson.m05.l46.requirement|6|std::sort|feedback.m05.l46.construct
+47|5|m05_l47|lesson.m05.l47.title|lesson.m05.l47.requirement|6|std::for_each|feedback.m05.l47.construct
+48|5|m05_l48|lesson.m05.l48.title|lesson.m05.l48.requirement|6|all:std::vector,std::find|feedback.m05.l48.construct
+49|5|m05_l49|lesson.m05.l49.title|lesson.m05.l49.requirement|6|all:std::map,std::string|feedback.m05.l49.construct
+50|5|m05_l50|lesson.m05.l50.title|lesson.m05.l50.requirement|6|all:std::vector,std::sort|feedback.m05.l50.construct

@@ -123,3 +123,33 @@ feedback.m04.l39.construct|ประกาศฟังก์ชัน verify_del
 lesson.m04.l40.title|ประเมินฟังก์ชันอัตโนมัติ
 lesson.m04.l40.requirement|รวมฟังก์ชัน run_automation_cycle เป็นรอบอัตโนมัติที่ตรวจสอบได้
 feedback.m04.l40.construct|ประกาศฟังก์ชัน run_automation_cycle ที่เรียกใช้ได้
+lesson.m05.l41.title|รายการเส้นทางเก็บเกี่ยว
+lesson.m05.l41.requirement|ใช้ std::vector เก็บลำดับของเส้นทางเก็บเกี่ยว
+feedback.m05.l41.construct|เพิ่ม std::vector สำหรับเก็บเส้นทาง
+lesson.m05.l42.title|ชุดเส้นทางคู่
+lesson.m05.l42.requirement|ใช้ std::vector สองชุดเพื่อแยกเส้นทางหลักและเส้นทางสำรอง
+feedback.m05.l42.construct|ใช้ std::vector สองครั้งสำหรับชุดเส้นทาง
+lesson.m05.l43.title|ป้ายชื่อเส้นทาง
+lesson.m05.l43.requirement|ใช้ std::string เก็บชื่อของเส้นทางอัตโนมัติ
+feedback.m05.l43.construct|เพิ่ม std::string สำหรับชื่อเส้นทาง
+lesson.m05.l44.title|ตารางสถานี
+lesson.m05.l44.requirement|ใช้ std::map จับคู่โหมดสถานีกับชื่อเส้นทาง
+feedback.m05.l44.construct|เพิ่ม std::map สำหรับข้อมูลสถานี
+lesson.m05.l45.title|ค้นหาสถานีที่อนุมัติ
+lesson.m05.l45.requirement|ใช้ std::find ค้นหาสถานีที่อนุมัติในรายการเส้นทาง
+feedback.m05.l45.construct|ใช้ std::find เพื่อค้นหารายการเส้นทาง
+lesson.m05.l46.title|เรียงลำดับเส้นทาง
+lesson.m05.l46.requirement|ใช้ std::sort เรียงลำดับคิวเส้นทางก่อนส่งงาน
+feedback.m05.l46.construct|ใช้ std::sort เพื่อเรียงลำดับคิวเส้นทาง
+lesson.m05.l47.title|ตรวจทุกจุดในเส้นทาง
+lesson.m05.l47.requirement|ใช้ std::for_each ตรวจจุดทั้งหมดในเส้นทาง
+feedback.m05.l47.construct|ใช้ std::for_each สำหรับตรวจแต่ละจุด
+lesson.m05.l48.title|ค้นหาในรายการเส้นทาง
+lesson.m05.l48.requirement|รวม std::vector และ std::find เพื่อตรวจสอบเส้นทางที่กำหนด
+feedback.m05.l48.construct|เพิ่มทั้ง std::vector และ std::find
+lesson.m05.l49.title|ข้อมูลสถานีและชื่อเส้นทาง
+lesson.m05.l49.requirement|รวม std::map และ std::string เพื่อรายงานสถานีของเส้นทาง
+feedback.m05.l49.construct|เพิ่มทั้ง std::map และ std::string
+lesson.m05.l50.title|ประเมิน STL สำหรับระบบอัตโนมัติ
+lesson.m05.l50.requirement|ใช้ std::vector และ std::sort สร้างเส้นทางอัตโนมัติที่เรียงลำดับแล้ว
+feedback.m05.l50.construct|เพิ่มทั้ง std::vector และ std::sort สำหรับการประเมิน

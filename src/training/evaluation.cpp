@@ -7,6 +7,18 @@ namespace bond {
 namespace {
 bool contains_construct(std::string_view source, std::string_view construct) {
   if (construct.empty()) return true;
+  constexpr std::string_view all_prefix{"all:"};
+  if (construct.starts_with(all_prefix)) {
+    auto remaining = construct.substr(all_prefix.size());
+    if (remaining.empty()) return false;
+    while (true) {
+      const auto separator = remaining.find(',');
+      const auto item = remaining.substr(0, separator);
+      if (item.empty() || !contains_construct(source, item)) return false;
+      if (separator == std::string_view::npos) return true;
+      remaining.remove_prefix(separator + 1);
+    }
+  }
   constexpr std::string_view function_prefix{"function:"};
   if (construct.starts_with(function_prefix)) {
     const auto name = construct.substr(function_prefix.size());

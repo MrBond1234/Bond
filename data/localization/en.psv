@@ -123,3 +123,33 @@ feedback.m04.l39.construct|Declare a callable verify_delivery function.
 lesson.m04.l40.title|Automation Function Assessment
 lesson.m04.l40.requirement|Combine run_automation_cycle into a verifiable automation cycle.
 feedback.m04.l40.construct|Declare a callable run_automation_cycle function.
+lesson.m05.l41.title|Harvest Route List
+lesson.m05.l41.requirement|Use std::vector to store the ordered harvest route.
+feedback.m05.l41.construct|Add a std::vector for route storage.
+lesson.m05.l42.title|Paired Route Collections
+lesson.m05.l42.requirement|Use two std::vector collections for primary and fallback routes.
+feedback.m05.l42.construct|Use std::vector twice for the route collections.
+lesson.m05.l43.title|Route Label
+lesson.m05.l43.requirement|Use std::string to store an automation route name.
+feedback.m05.l43.construct|Add a std::string for the route name.
+lesson.m05.l44.title|Station Table
+lesson.m05.l44.requirement|Use std::map to associate station modes with route names.
+feedback.m05.l44.construct|Add a std::map for station data.
+lesson.m05.l45.title|Approved Station Lookup
+lesson.m05.l45.requirement|Use std::find to locate an approved station in the route collection.
+feedback.m05.l45.construct|Use std::find to search the route collection.
+lesson.m05.l46.title|Route Ordering
+lesson.m05.l46.requirement|Use std::sort to order the route queue before dispatch.
+feedback.m05.l46.construct|Use std::sort to order the route queue.
+lesson.m05.l47.title|Inspect Every Route Point
+lesson.m05.l47.requirement|Use std::for_each to inspect every point in the route.
+feedback.m05.l47.construct|Use std::for_each for each route point.
+lesson.m05.l48.title|Route List Search
+lesson.m05.l48.requirement|Combine std::vector and std::find to check a requested route.
+feedback.m05.l48.construct|Add both std::vector and std::find.
+lesson.m05.l49.title|Station Data and Route Name
+lesson.m05.l49.requirement|Combine std::map and std::string to report a route station.
+feedback.m05.l49.construct|Add both std::map and std::string.
+lesson.m05.l50.title|STL Automation Assessment
+lesson.m05.l50.requirement|Use std::vector and std::sort to build an ordered automation route.
+feedback.m05.l50.construct|Add both std::vector and std::sort for the assessment.

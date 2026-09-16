@@ -15,7 +15,7 @@ Every stage is 1% curriculum completion; 100% reports completion of this curricu
 | 9. Pathfinding & Optimization | 81–90 | BFS, Dijkstra, A*, heuristics, scheduling, optimization measurements |
 | 10. Software Architecture | 91–100 | interfaces, separation, testing, persistence, localization, final automation project |
 
-## v0.4 playable sequence (1–40)
+## v0.5 playable sequence (1–50)
 
 1. Start a program and issue one harvest command.
 2. Store a movement count in an integer.
@@ -57,3 +57,13 @@ Every stage is 1% curriculum completion; 100% reports completion of this curricu
 38. Combine a safety decision with a reusable route function.
 39. Verify delivery through a helper that reports success.
 40. Complete the Module 4 functions-and-modular-automation assessment.
+41. Store an ordered harvest route in a `std::vector`.
+42. Keep two route collections with `std::vector`.
+43. Use `std::string` to label an automation route.
+44. Associate station modes and route names with `std::map`.
+45. Find an approved station in a route collection with `std::find`.
+46. Sort a queued route before dispatch with `std::sort`.
+47. Apply a route inspection to each item with `std::for_each`.
+48. Combine a vector route with a search operation.
+49. Combine a station map with descriptive route text.
+50. Complete the Module 5 STL data-automation assessment with a sorted vector route.
