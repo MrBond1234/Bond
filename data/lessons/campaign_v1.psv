@@ -59,3 +59,13 @@ id|module|key|title_key|requirement_key|target_harvest|required_construct|feedba
 58|6|m06_l58|lesson.m06.l58.title|lesson.m06.l58.requirement|6|all:std::shared_ptr,std::weak_ptr|feedback.m06.l58.construct
 59|6|m06_l59|lesson.m06.l59.title|lesson.m06.l59.requirement|6|std::make_unique|feedback.m06.l59.construct
 60|6|m06_l60|lesson.m06.l60.title|lesson.m06.l60.requirement|6|all:std::unique_ptr,std::make_unique|feedback.m06.l60.construct
+61|7|m07_l61|lesson.m07.l61.title|lesson.m07.l61.requirement|5|template|feedback.m07.l61.construct
+62|7|m07_l62|lesson.m07.l62.title|lesson.m07.l62.requirement|5|template*2|feedback.m07.l62.construct
+63|7|m07_l63|lesson.m07.l63.title|lesson.m07.l63.requirement|5|requires|feedback.m07.l63.construct
+64|7|m07_l64|lesson.m07.l64.title|lesson.m07.l64.requirement|5|std::sort|feedback.m07.l64.construct
+65|7|m07_l65|lesson.m07.l65.title|lesson.m07.l65.requirement|5|std::find|feedback.m07.l65.construct
+66|7|m07_l66|lesson.m07.l66.title|lesson.m07.l66.requirement|6|std::binary_search|feedback.m07.l66.construct
+67|7|m07_l67|lesson.m07.l67.title|lesson.m07.l67.requirement|6|std::lower_bound|feedback.m07.l67.construct
+68|7|m07_l68|lesson.m07.l68.title|lesson.m07.l68.requirement|6|all:std::sort,std::find|feedback.m07.l68.construct
+69|7|m07_l69|lesson.m07.l69.title|lesson.m07.l69.requirement|6|all:template,requires|feedback.m07.l69.construct
+70|7|m07_l70|lesson.m07.l70.title|lesson.m07.l70.requirement|6|all:template,std::sort|feedback.m07.l70.construct

@@ -42,12 +42,12 @@ LRESULT CALLBACK window_proc(HWND window, UINT message, WPARAM wparam, LPARAM) {
         const int length = GetWindowTextLengthW(code_editor); std::wstring source(length + 1, L'\0');
         GetWindowTextW(code_editor, source.data(), length + 1); source.resize(length);
         bond::WorkerCodeExecutor executor(BOND_EXECUTION_WORKER_PATH);
-        const auto result = executor.compile_and_run({wide_to_utf8(source), {"lesson-51"}});
+        const auto result = executor.compile_and_run({wide_to_utf8(source), {"lesson-61"}});
         const auto report = result.compiler_diagnostics.empty() ? result.standard_output : result.compiler_diagnostics + "\r\n" + result.standard_output;
         SetWindowTextW(output_pane, utf8_to_wide(report.empty() ? localizer.text("ui.status.no_output") : report).c_str()); break;
       }
       case 102: application.step_simulation(bond::Command::move_north); refresh_snapshot(); SetWindowTextW(output_pane, text("ui.status.stepped").c_str()); break;
-      case 103: application.start_lesson(51); refresh_snapshot(); SetWindowTextW(output_pane, text("ui.status.reset").c_str()); break;
+      case 103: application.start_lesson(61); refresh_snapshot(); SetWindowTextW(output_pane, text("ui.status.reset").c_str()); break;
     }
     return 0;
   }
@@ -60,14 +60,14 @@ int APIENTRY wWinMain(HINSTANCE instance, HINSTANCE, PWSTR, int command_show) {
   application.initialize(BOND_DATA_DIR "/lessons/campaign_v1.psv");
   localizer.load_fallback(BOND_DATA_DIR "/localization/en.psv");
   localizer.load(BOND_DATA_DIR "/localization/th.psv");
-  application.start_lesson(51);
+  application.start_lesson(61);
   const wchar_t class_name[] = L"BondTrainingWorkbench";
   WNDCLASSW window_class{}; window_class.hInstance = instance; window_class.lpszClassName = class_name;
   window_class.lpfnWndProc = window_proc; window_class.hCursor = LoadCursor(nullptr, IDC_ARROW);
   window_class.hbrBackground = static_cast<HBRUSH>(GetStockObject(DKGRAY_BRUSH)); RegisterClassW(&window_class);
   HWND window = CreateWindowExW(0, class_name, text("app.title").c_str(), WS_OVERLAPPEDWINDOW | WS_VISIBLE,
       CW_USEDEFAULT, CW_USEDEFAULT, 1180, 720, nullptr, nullptr, instance, nullptr);
-  const auto lesson = application.campaign().find(51);
+  const auto lesson = application.campaign().find(61);
   const std::wstring task = lesson ? text(lesson->title_key.c_str()) + L"\r\n\r\n" + text(lesson->requirement_key.c_str()) : L"Campaign data unavailable.";
   CreateWindowW(L"STATIC", text("ui.task").c_str(), WS_CHILD | WS_VISIBLE, 20, 20, 330, 24, window, nullptr, instance, nullptr);
   CreateWindowExW(WS_EX_CLIENTEDGE, L"EDIT", task.c_str(), WS_CHILD | WS_VISIBLE | WS_VSCROLL | ES_MULTILINE | ES_READONLY, 20, 46, 330, 194, window, nullptr, instance, nullptr);

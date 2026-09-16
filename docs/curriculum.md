@@ -15,7 +15,7 @@ Every stage is 1% curriculum completion; 100% reports completion of this curricu
 | 9. Pathfinding & Optimization | 81–90 | BFS, Dijkstra, A*, heuristics, scheduling, optimization measurements |
 | 10. Software Architecture | 91–100 | interfaces, separation, testing, persistence, localization, final automation project |
 
-## v0.6 playable sequence (1–60)
+## v0.7 playable sequence (1–70)
 
 1. Start a program and issue one harvest command.
 2. Store a movement count in an integer.
@@ -77,3 +77,13 @@ Every stage is 1% curriculum completion; 100% reports completion of this curricu
 58. Prevent shared route-reference cycles with `std::weak_ptr`.
 59. Allocate an inspection resource through `std::make_unique`.
 60. Complete the Module 6 resource-safety assessment with owned, safely constructed route state.
+61. Create a generic route helper with a function template.
+62. Use two templates to separate route input and output behavior.
+63. Constrain an automation helper with a C++20 `requires` expression.
+64. Sort route values with `std::sort`.
+65. Locate a route value with `std::find`.
+66. Search an ordered route efficiently with `std::binary_search`.
+67. Locate the first suitable ordered route with `std::lower_bound`.
+68. Combine sorting and searching for a verified route queue.
+69. Combine a template with a `requires` constraint.
+70. Complete the Module 7 templates-and-algorithms assessment.

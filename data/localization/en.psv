@@ -183,3 +183,33 @@ feedback.m06.l59.construct|Use std::make_unique for the inspection resource.
 lesson.m06.l60.title|Resource Safety Assessment
 lesson.m06.l60.requirement|Use std::unique_ptr and std::make_unique to build safe route state.
 feedback.m06.l60.construct|Add both std::unique_ptr and std::make_unique for the assessment.
+lesson.m07.l61.title|Generic Route Helper
+lesson.m07.l61.requirement|Use template to create a route helper that accepts multiple data types.
+feedback.m07.l61.construct|Add a template for the generic helper.
+lesson.m07.l62.title|Paired Route Templates
+lesson.m07.l62.requirement|Use two templates to separate route input and output behavior.
+feedback.m07.l62.construct|Use template twice for this task.
+lesson.m07.l63.title|Helper Requirement
+lesson.m07.l63.requirement|Use requires to constrain data accepted by an automation helper.
+feedback.m07.l63.construct|Add requires to constrain template use.
+lesson.m07.l64.title|Route Value Ordering
+lesson.m07.l64.requirement|Use std::sort to order queued route values.
+feedback.m07.l64.construct|Use std::sort to order route values.
+lesson.m07.l65.title|Route Value Lookup
+lesson.m07.l65.requirement|Use std::find to locate a requested value in the route.
+feedback.m07.l65.construct|Use std::find to locate the value.
+lesson.m07.l66.title|Binary Route Search
+lesson.m07.l66.requirement|Use std::binary_search to check a value in an ordered route.
+feedback.m07.l66.construct|Use std::binary_search with the ordered route.
+lesson.m07.l67.title|Suitable Route Position
+lesson.m07.l67.requirement|Use std::lower_bound to find the first suitable task position.
+feedback.m07.l67.construct|Use std::lower_bound to find the position.
+lesson.m07.l68.title|Sort and Search Routes
+lesson.m07.l68.requirement|Combine std::sort and std::find to verify a route queue.
+feedback.m07.l68.construct|Add both std::sort and std::find.
+lesson.m07.l69.title|Constrained Template
+lesson.m07.l69.requirement|Combine template and requires to create a type-safe helper.
+feedback.m07.l69.construct|Add both template and requires.
+lesson.m07.l70.title|Template and Algorithm Assessment
+lesson.m07.l70.requirement|Combine template and std::sort to manage a verifiable route.
+feedback.m07.l70.construct|Add both template and std::sort for the assessment.
