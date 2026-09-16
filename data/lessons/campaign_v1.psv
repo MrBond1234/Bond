@@ -79,3 +79,13 @@ id|module|key|title_key|requirement_key|target_harvest|required_construct|feedba
 78|8|m08_l78|lesson.m08.l78.title|lesson.m08.l78.requirement|6|all:std::unordered_map,std::queue|feedback.m08.l78.construct
 79|8|m08_l79|lesson.m08.l79.title|lesson.m08.l79.requirement|6|std::priority_queue|feedback.m08.l79.construct
 80|8|m08_l80|lesson.m08.l80.title|lesson.m08.l80.requirement|6|all:std::queue,std::priority_queue|feedback.m08.l80.construct
+81|9|m09_l81|lesson.m09.l81.title|lesson.m09.l81.requirement|5|std::queue|feedback.m09.l81.construct
+82|9|m09_l82|lesson.m09.l82.title|lesson.m09.l82.requirement|5|std::priority_queue|feedback.m09.l82.construct
+83|9|m09_l83|lesson.m09.l83.title|lesson.m09.l83.requirement|5|heuristic|feedback.m09.l83.construct
+84|9|m09_l84|lesson.m09.l84.title|lesson.m09.l84.requirement|5|distance|feedback.m09.l84.construct
+85|9|m09_l85|lesson.m09.l85.title|lesson.m09.l85.requirement|5|std::numeric_limits|feedback.m09.l85.construct
+86|9|m09_l86|lesson.m09.l86.title|lesson.m09.l86.requirement|6|all:std::queue,distance|feedback.m09.l86.construct
+87|9|m09_l87|lesson.m09.l87.title|lesson.m09.l87.requirement|6|all:std::priority_queue,distance|feedback.m09.l87.construct
+88|9|m09_l88|lesson.m09.l88.title|lesson.m09.l88.requirement|6|all:heuristic,distance|feedback.m09.l88.construct
+89|9|m09_l89|lesson.m09.l89.title|lesson.m09.l89.requirement|6|std::priority_queue|feedback.m09.l89.construct
+90|9|m09_l90|lesson.m09.l90.title|lesson.m09.l90.requirement|6|all:std::priority_queue,heuristic|feedback.m09.l90.construct
