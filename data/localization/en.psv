@@ -35,6 +35,37 @@ ui.status.ready|The isolated execution worker is ready. Learner code never runs 
 ui.status.no_output|The worker completed without diagnostic output.
 ui.status.stepped|Simulation advanced by one engineering step.
 ui.status.reset|Lesson simulation reset.
+ui.previous|Previous lesson
+ui.next|Next lesson
+ui.up|Up
+ui.down|Down
+ui.left|Left
+ui.right|Right
+ui.harvest|Harvest
+ui.deposit|Deposit
+ui.run_code|Run C++ code
+ui.check_solution|Check and save
+ui.progress|Progress
+ui.completed|Completed
+ui.objective|Objective
+ui.harvest_units|units to deliver
+ui.startup_error|Bond Training could not start
+ui.status.startup_failed|The application could not prepare its training data.
+ui.status.window_failed|Windows could not create the application window.
+ui.status.lesson_loaded|Lesson loaded and simulation reset.
+ui.status.action_applied|Command applied. Inspect the simulation board.
+ui.status.action_blocked|That command is not available from the current position.
+ui.status.simulation_complete|The target is delivered. Use Check and save to evaluate your code.
+ui.status.worker_missing|The execution worker is missing beside the application. Reinstall the package.
+ui.status.run_failed|The isolated worker could not run the code.
+ui.status.compiler_unavailable|Visual Studio's C++ compiler was not found. Install Desktop development with C++ and restart the app.
+ui.status.no_commands|The program ran but did not return supported BOND commands.
+ui.status.commands_applied|Applied commands returned by the learner program.
+ui.status.commands_ignored|Output lines that were not commands
+ui.status.command_limit|Stopped reading commands at the safety limit.
+ui.status.not_complete|The lesson requirements are not complete yet.
+ui.status.lesson_complete|Lesson complete. Progress was saved on this computer.
+ui.status.lesson_complete_unsaved|Lesson complete, but progress could not be saved.
 feedback.none|Review the task requirements and run the simulation again.
 feedback.simulation.incomplete|The simulation has not delivered the required harvest to the depot.
 feedback.m01.l04.construct|Add an if statement to check the crop before harvesting.

@@ -8,6 +8,9 @@ public:
   void reset(int target_harvest);
   bool step(Command command);
   [[nodiscard]] SimulationSnapshot snapshot() const;
+  [[nodiscard]] int width() const { return width_; }
+  [[nodiscard]] int height() const { return height_; }
+  [[nodiscard]] Cell cell_at(GridPosition position) const;
 private:
   bool move(int dx, int dy);
   int width_, height_, target_{};

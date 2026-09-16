@@ -1,4 +1,5 @@
 #include "bond/application.hpp"
+#include "bond/automation_protocol.hpp"
 #include "bond/daily_exercise.hpp"
 #include "bond/evaluation.hpp"
 #include "bond/execution.hpp"
@@ -7,6 +8,10 @@
 #include <filesystem>
 #include <fstream>
 #include <iostream>
+#ifdef _WIN32
+#include <array>
+#include <windows.h>
+#endif
 
 namespace {
 int failures{};
@@ -56,6 +61,9 @@ int main() {
   expect(sim.step(bond::Command::move_west), "robot reaches depot");
   expect(sim.step(bond::Command::deposit), "robot deposits inventory");
   expect(sim.snapshot().complete, "lesson completes after deposit");
+  expect(sim.width() == 6 && sim.height() == 6, "simulation exposes board dimensions for the UI");
+  expect(sim.cell_at({0, 0}) == bond::Cell::depot, "simulation exposes depot cell for the UI");
+  expect(sim.cell_at({-1, 0}) == bond::Cell::wall, "out-of-bounds cells remain blocked for the UI");
   sim.reset(5);
   expect(sim.snapshot().remaining_crops == 5 && sim.snapshot().actions == 0, "extended route initializes five crops and no actions");
   expect(sim.step(bond::Command::move_north), "extended route reaches first row");
@@ -82,6 +90,15 @@ int main() {
     expect(localizer.text(lesson.title_key) != lesson.title_key, "every lesson title is localized");
     expect(localizer.text(lesson.requirement_key) != lesson.requirement_key, "every lesson requirement is localized");
     expect(localizer.text(lesson.feedback_key) != lesson.feedback_key, "every lesson feedback is localized");
+  }
+  for (const auto* key : {"ui.previous", "ui.next", "ui.up", "ui.down", "ui.left", "ui.right", "ui.harvest", "ui.deposit",
+                          "ui.run_code", "ui.check_solution", "ui.progress", "ui.completed", "ui.objective", "ui.harvest_units",
+                          "ui.startup_error", "ui.status.startup_failed", "ui.status.window_failed", "ui.status.lesson_loaded",
+                          "ui.status.action_applied", "ui.status.action_blocked", "ui.status.simulation_complete", "ui.status.worker_missing",
+                          "ui.status.run_failed", "ui.status.compiler_unavailable", "ui.status.no_commands", "ui.status.commands_applied",
+                          "ui.status.commands_ignored", "ui.status.command_limit", "ui.status.not_complete", "ui.status.lesson_complete",
+                          "ui.status.lesson_complete_unsaved"}) {
+    expect(localizer.text(key) != key, "playable workbench UI is localized");
   }
 
   const auto progress_file = std::filesystem::temp_directory_path() / "bond_core_tests_progress.txt";
@@ -135,6 +152,35 @@ int main() {
   expect(bond::WorkerCodeExecutor::is_request_safe({"int main() {}", {"lesson-11"}}, limits), "execution accepts bounded source request");
   bond::WorkerCodeExecutor unavailable("missing-worker.exe");
   expect(unavailable.compile_and_run({"int main() {}", {}}).rejected, "execution never falls back to the application process");
+
+#ifdef _WIN32
+  std::array<wchar_t, 32768> original_path{};
+  const DWORD original_path_length = GetEnvironmentVariableW(L"PATH", original_path.data(), static_cast<DWORD>(original_path.size()));
+  SetEnvironmentVariableW(L"PATH", L"");
+  bond::ExecutionLimits integration_limits;
+  integration_limits.timeout_ms = 10000;
+  bond::WorkerCodeExecutor installed_worker(BOND_EXECUTION_WORKER_PATH, integration_limits);
+  const auto worker_result = installed_worker.compile_and_run({"#include <iostream>\nint main() { std::cout << \"BOND:UP\\nBOND:RIGHT\\nBOND:HARVEST\\nBOND:LEFT\\nBOND:LEFT\\nBOND:DEPOSIT\\n\"; }", {"integration"}});
+  if (original_path_length != 0 && original_path_length < original_path.size()) {
+    SetEnvironmentVariableW(L"PATH", std::wstring(original_path.data(), original_path_length).c_str());
+  } else {
+    SetEnvironmentVariableW(L"PATH", nullptr);
+  }
+  expect(!worker_result.rejected && worker_result.compiler_diagnostics.empty(),
+         "worker bootstraps the installed Visual Studio compiler without inheriting PATH");
+  bond::Simulation worker_driven_simulation;
+  worker_driven_simulation.reset(1);
+  for (const auto command : bond::parse_automation_commands(worker_result.standard_output).commands) worker_driven_simulation.step(command);
+  expect(worker_driven_simulation.snapshot().complete, "worker output drives a completed simulator route through the bounded protocol");
+#endif
+
+  const auto parsed = bond::parse_automation_commands("BOND:UP\r\nBOND:RIGHT\nhello\nBOND:HARVEST\nBOND:LEFT\nBOND:LEFT\nBOND:DEPOSIT\n");
+  expect(parsed.commands == std::vector<bond::Command>({bond::Command::move_north, bond::Command::move_east,
+      bond::Command::harvest, bond::Command::move_west, bond::Command::move_west, bond::Command::deposit}),
+      "automation protocol maps worker output to safe simulator commands");
+  expect(parsed.ignored_lines == 1 && !parsed.limit_reached, "automation protocol ignores non-command worker output");
+  const auto limited = bond::parse_automation_commands("BOND:UP\nBOND:DOWN\n", 1);
+  expect(limited.commands.size() == 1 && limited.limit_reached, "automation protocol enforces a command limit");
 
   return failures == 0 ? 0 : 1;
 }

@@ -1,7 +1,10 @@
 #include <windows.h>
 #include <filesystem>
 #include <fstream>
+#include <iterator>
+#include <optional>
 #include <string>
+#include <vector>
 
 namespace {
 void write_result(const std::filesystem::path& path, const std::string& diagnostics, const std::string& output) {
@@ -42,6 +45,35 @@ bool run_process(std::wstring command, const std::filesystem::path& directory, D
   CloseHandle(read_pipe); CloseHandle(process.hThread); CloseHandle(process.hProcess); if (job) CloseHandle(job);
   return waited != WAIT_TIMEOUT;
 }
+
+std::optional<std::filesystem::path> visual_studio_environment_script() {
+  wchar_t program_files[32768]{};
+  const auto length = GetEnvironmentVariableW(L"ProgramFiles(x86)", program_files, static_cast<DWORD>(std::size(program_files)));
+  if (length == 0 || length >= std::size(program_files)) return std::nullopt;
+  const std::filesystem::path root = std::filesystem::path(std::wstring(program_files, length)) / L"Microsoft Visual Studio";
+  constexpr const wchar_t* editions[]{L"BuildTools", L"Community", L"Professional", L"Enterprise"};
+  constexpr const wchar_t* versions[]{L"18", L"2022", L"2019"};
+  for (const auto* version : versions) {
+    for (const auto* edition : editions) {
+      const auto script = root / version / edition / L"Common7" / L"Tools" / L"VsDevCmd.bat";
+      if (std::filesystem::is_regular_file(script)) return script;
+    }
+  }
+  return std::nullopt;
+}
+
+bool compile_with_visual_studio(const std::wstring& compiler_command, const std::filesystem::path& directory,
+                                DWORD timeout_ms, std::size_t output_limit, std::size_t memory_limit,
+                                std::string& diagnostics) {
+  if (run_process(compiler_command, directory, timeout_ms, output_limit, memory_limit, diagnostics, false)) return true;
+  const auto environment_script = visual_studio_environment_script();
+  if (!environment_script) return false;
+  // The shell receives only a fixed Visual Studio setup script and generated worker paths. Learner source is never interpolated.
+  const std::wstring bootstrap = L"cmd.exe /d /s /c \"call \"" + environment_script->wstring() +
+      L"\" -arch=x64 >nul && " + compiler_command + L"\"";
+  diagnostics.clear();
+  return run_process(bootstrap, directory, timeout_ms, output_limit, memory_limit, diagnostics, false);
+}
 }
 
 int wmain(int argc, wchar_t** argv) {
@@ -58,8 +90,8 @@ int wmain(int argc, wchar_t** argv) {
   const auto source_file = directory / "learner.cpp"; const auto program = directory / "learner.exe";
   { std::ofstream out(source_file, std::ios::binary); out << source; }
   std::string diagnostics, output;
-  const std::wstring compiler = L"cl.exe /nologo /EHsc /std:c++20 \"" + source_file.wstring() + L"\" /Fe:\"" + program.wstring() + L"\"";
-  if (!run_process(compiler, directory, timeout, 16 * 1024, memory, diagnostics, false) || !std::filesystem::is_regular_file(program)) {
+  const std::wstring compiler = L"cl.exe /nologo /EHsc /std:c++20 /MT \"" + source_file.wstring() + L"\" /Fe:\"" + program.wstring() + L"\"";
+  if (!compile_with_visual_studio(compiler, directory, timeout, 16 * 1024, memory, diagnostics) || !std::filesystem::is_regular_file(program)) {
     write_result(result, diagnostics.empty() ? "C++ compiler was unavailable or compilation timed out." : diagnostics, "");
     std::filesystem::remove_all(directory, ignored); return 4;
   }

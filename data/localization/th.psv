@@ -35,6 +35,37 @@ ui.status.ready|Worker แยกสำหรับการรันโค้ด
 ui.status.no_output|Worker ทำงานเสร็จโดยไม่มีข้อความวินิจฉัย
 ui.status.stepped|การจำลองดำเนินไปหนึ่งขั้นตอน
 ui.status.reset|เริ่มการจำลองของบทเรียนใหม่แล้ว
+ui.previous|บทก่อนหน้า
+ui.next|บทถัดไป
+ui.up|ขึ้น
+ui.down|ลง
+ui.left|ซ้าย
+ui.right|ขวา
+ui.harvest|เก็บเกี่ยว
+ui.deposit|ส่งเข้าคลัง
+ui.run_code|รันโค้ด C++
+ui.check_solution|ตรวจและบันทึกผล
+ui.progress|ความคืบหน้า
+ui.completed|ผ่านแล้ว
+ui.objective|เป้าหมาย
+ui.harvest_units|หน่วยที่ต้องส่งเข้าคลัง
+ui.startup_error|เปิด Bond Training ไม่สำเร็จ
+ui.status.startup_failed|แอปพลิเคชันไม่สามารถเตรียมข้อมูลการฝึกได้
+ui.status.window_failed|Windows ไม่สามารถสร้างหน้าต่างของแอปพลิเคชันได้
+ui.status.lesson_loaded|โหลดบทเรียนและเริ่มการจำลองใหม่แล้ว
+ui.status.action_applied|รับคำสั่งแล้ว ดูสถานะบนกระดานจำลอง
+ui.status.action_blocked|คำสั่งนี้ทำไม่ได้จากตำแหน่งปัจจุบัน
+ui.status.simulation_complete|ส่งผลผลิตเข้าคลังครบแล้ว กด “ตรวจและบันทึกผล” เพื่อตรวจโค้ด
+ui.status.worker_missing|ไม่พบ execution worker ข้างแอปพลิเคชัน กรุณาติดตั้งแพ็กเกจใหม่
+ui.status.run_failed|ไม่สามารถรันโค้ดใน isolated worker ได้
+ui.status.compiler_unavailable|ไม่พบ C++ compiler ของ Visual Studio กรุณาติดตั้ง Desktop development with C++ แล้วเปิดใหม่
+ui.status.no_commands|โค้ดทำงานแล้ว แต่ไม่ได้ส่งคำสั่ง BOND ที่รองรับกลับมา
+ui.status.commands_applied|นำคำสั่งจากโค้ดไปใช้กับการจำลองแล้ว
+ui.status.commands_ignored|บรรทัดผลลัพธ์ที่ไม่ใช่คำสั่ง
+ui.status.command_limit|หยุดอ่านคำสั่งเมื่อถึงขีดจำกัดเพื่อความปลอดภัย
+ui.status.not_complete|ยังไม่ผ่านข้อกำหนดของบทเรียน
+ui.status.lesson_complete|ผ่านบทเรียนแล้ว และบันทึกความคืบหน้าไว้ในเครื่องนี้
+ui.status.lesson_complete_unsaved|ผ่านบทเรียนแล้ว แต่บันทึกความคืบหน้าไม่สำเร็จ
 feedback.none|ตรวจสอบข้อกำหนดของงาน แล้วรันการจำลองอีกครั้ง
 feedback.simulation.incomplete|การจำลองยังส่งพืชตามจำนวนที่กำหนดเข้าคลังไม่ครบ
 feedback.m01.l04.construct|เพิ่มคำสั่ง if เพื่อตรวจพืชก่อนเก็บเกี่ยว

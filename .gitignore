@@ -1,5 +1,9 @@
 /build/
+/build-*/
+/playable/
+/_CPack_Packages/
 *.obj
 *.pdb
 *.exe
+*.zip
 
