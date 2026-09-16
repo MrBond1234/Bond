@@ -15,7 +15,7 @@ Every stage is 1% curriculum completion; 100% reports completion of this curricu
 | 9. Pathfinding & Optimization | 81–90 | BFS, Dijkstra, A*, heuristics, scheduling, optimization measurements |
 | 10. Software Architecture | 91–100 | interfaces, separation, testing, persistence, localization, final automation project |
 
-## v0.5 playable sequence (1–50)
+## v0.6 playable sequence (1–60)
 
 1. Start a program and issue one harvest command.
 2. Store a movement count in an integer.
@@ -67,3 +67,13 @@ Every stage is 1% curriculum completion; 100% reports completion of this curricu
 48. Combine a vector route with a search operation.
 49. Combine a station map with descriptive route text.
 50. Complete the Module 5 STL data-automation assessment with a sorted vector route.
+51. Establish exclusive route ownership with `std::unique_ptr`.
+52. Construct an owned route resource with `std::make_unique`.
+53. Transfer a route resource safely with `std::move`.
+54. Share a monitored route resource with `std::shared_ptr`.
+55. Observe shared route ownership without extending lifetime via `std::weak_ptr`.
+56. Combine exclusive ownership and safe construction for a route resource.
+57. Move exclusive route ownership to a dispatch stage.
+58. Prevent shared route-reference cycles with `std::weak_ptr`.
+59. Allocate an inspection resource through `std::make_unique`.
+60. Complete the Module 6 resource-safety assessment with owned, safely constructed route state.

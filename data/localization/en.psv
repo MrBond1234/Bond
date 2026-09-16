@@ -153,3 +153,33 @@ feedback.m05.l49.construct|Add both std::map and std::string.
 lesson.m05.l50.title|STL Automation Assessment
 lesson.m05.l50.requirement|Use std::vector and std::sort to build an ordered automation route.
 feedback.m05.l50.construct|Add both std::vector and std::sort for the assessment.
+lesson.m06.l51.title|Exclusive Route Owner
+lesson.m06.l51.requirement|Use std::unique_ptr to establish one owner for a route resource.
+feedback.m06.l51.construct|Add std::unique_ptr for route ownership.
+lesson.m06.l52.title|Safe Resource Construction
+lesson.m06.l52.requirement|Use std::make_unique to construct an owned route resource.
+feedback.m06.l52.construct|Use std::make_unique for resource construction.
+lesson.m06.l53.title|Move Route Ownership
+lesson.m06.l53.requirement|Use std::move to transfer resource ownership to dispatch.
+feedback.m06.l53.construct|Use std::move to transfer resource ownership.
+lesson.m06.l54.title|Shared Route Ownership
+lesson.m06.l54.requirement|Use std::shared_ptr when multiple inspectors share a route resource.
+feedback.m06.l54.construct|Add std::shared_ptr for shared ownership.
+lesson.m06.l55.title|Resource Observer
+lesson.m06.l55.requirement|Use std::weak_ptr to observe a shared resource without extending its lifetime.
+feedback.m06.l55.construct|Add std::weak_ptr for resource observation.
+lesson.m06.l56.title|Construct and Own
+lesson.m06.l56.requirement|Combine std::unique_ptr and std::make_unique for a safe route resource.
+feedback.m06.l56.construct|Add both std::unique_ptr and std::make_unique.
+lesson.m06.l57.title|Transfer Resource Ownership
+lesson.m06.l57.requirement|Combine std::unique_ptr and std::move to hand a route between stages.
+feedback.m06.l57.construct|Add both std::unique_ptr and std::move.
+lesson.m06.l58.title|Prevent Reference Cycles
+lesson.m06.l58.requirement|Combine std::shared_ptr and std::weak_ptr to prevent resource cycles.
+feedback.m06.l58.construct|Add both std::shared_ptr and std::weak_ptr.
+lesson.m06.l59.title|Inspection Resource
+lesson.m06.l59.requirement|Use std::make_unique to construct an inspection-stage resource.
+feedback.m06.l59.construct|Use std::make_unique for the inspection resource.
+lesson.m06.l60.title|Resource Safety Assessment
+lesson.m06.l60.requirement|Use std::unique_ptr and std::make_unique to build safe route state.
+feedback.m06.l60.construct|Add both std::unique_ptr and std::make_unique for the assessment.
