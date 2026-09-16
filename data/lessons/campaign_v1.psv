@@ -49,3 +49,13 @@ id|module|key|title_key|requirement_key|target_harvest|required_construct|feedba
 48|5|m05_l48|lesson.m05.l48.title|lesson.m05.l48.requirement|6|all:std::vector,std::find|feedback.m05.l48.construct
 49|5|m05_l49|lesson.m05.l49.title|lesson.m05.l49.requirement|6|all:std::map,std::string|feedback.m05.l49.construct
 50|5|m05_l50|lesson.m05.l50.title|lesson.m05.l50.requirement|6|all:std::vector,std::sort|feedback.m05.l50.construct
+51|6|m06_l51|lesson.m06.l51.title|lesson.m06.l51.requirement|5|std::unique_ptr|feedback.m06.l51.construct
+52|6|m06_l52|lesson.m06.l52.title|lesson.m06.l52.requirement|5|std::make_unique|feedback.m06.l52.construct
+53|6|m06_l53|lesson.m06.l53.title|lesson.m06.l53.requirement|5|std::move|feedback.m06.l53.construct
+54|6|m06_l54|lesson.m06.l54.title|lesson.m06.l54.requirement|5|std::shared_ptr|feedback.m06.l54.construct
+55|6|m06_l55|lesson.m06.l55.title|lesson.m06.l55.requirement|5|std::weak_ptr|feedback.m06.l55.construct
+56|6|m06_l56|lesson.m06.l56.title|lesson.m06.l56.requirement|6|all:std::unique_ptr,std::make_unique|feedback.m06.l56.construct
+57|6|m06_l57|lesson.m06.l57.title|lesson.m06.l57.requirement|6|all:std::unique_ptr,std::move|feedback.m06.l57.construct
+58|6|m06_l58|lesson.m06.l58.title|lesson.m06.l58.requirement|6|all:std::shared_ptr,std::weak_ptr|feedback.m06.l58.construct
+59|6|m06_l59|lesson.m06.l59.title|lesson.m06.l59.requirement|6|std::make_unique|feedback.m06.l59.construct
+60|6|m06_l60|lesson.m06.l60.title|lesson.m06.l60.requirement|6|all:std::unique_ptr,std::make_unique|feedback.m06.l60.construct

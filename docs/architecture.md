@@ -1,4 +1,4 @@
-# Architecture — v0.5
+# Architecture — v0.6
 
 `Application` coordinates the product. Its presentation host is intentionally a CLI today; a Windows UI can replace that host without owning training rules.
 

@@ -153,3 +153,33 @@ feedback.m05.l49.construct|เพิ่มทั้ง std::map และ std::s
 lesson.m05.l50.title|ประเมิน STL สำหรับระบบอัตโนมัติ
 lesson.m05.l50.requirement|ใช้ std::vector และ std::sort สร้างเส้นทางอัตโนมัติที่เรียงลำดับแล้ว
 feedback.m05.l50.construct|เพิ่มทั้ง std::vector และ std::sort สำหรับการประเมิน
+lesson.m06.l51.title|เจ้าของเส้นทางแบบเฉพาะ
+lesson.m06.l51.requirement|ใช้ std::unique_ptr เพื่อกำหนดเจ้าของทรัพยากรเส้นทางเพียงหนึ่งเดียว
+feedback.m06.l51.construct|เพิ่ม std::unique_ptr สำหรับเจ้าของเส้นทาง
+lesson.m06.l52.title|สร้างทรัพยากรอย่างปลอดภัย
+lesson.m06.l52.requirement|ใช้ std::make_unique เพื่อสร้างทรัพยากรเส้นทางที่เป็นเจ้าของ
+feedback.m06.l52.construct|ใช้ std::make_unique สำหรับสร้างทรัพยากร
+lesson.m06.l53.title|ย้ายเจ้าของเส้นทาง
+lesson.m06.l53.requirement|ใช้ std::move เพื่อย้ายเจ้าของทรัพยากรไปยังขั้นตอนส่งงาน
+feedback.m06.l53.construct|ใช้ std::move สำหรับย้ายเจ้าของทรัพยากร
+lesson.m06.l54.title|เจ้าของร่วมของเส้นทาง
+lesson.m06.l54.requirement|ใช้ std::shared_ptr เมื่อต้องมีผู้ตรวจหลายส่วนใช้ทรัพยากรร่วมกัน
+feedback.m06.l54.construct|เพิ่ม std::shared_ptr สำหรับเจ้าของร่วม
+lesson.m06.l55.title|ผู้สังเกตทรัพยากร
+lesson.m06.l55.requirement|ใช้ std::weak_ptr เพื่อตรวจทรัพยากรร่วมโดยไม่ยืดอายุการใช้งาน
+feedback.m06.l55.construct|เพิ่ม std::weak_ptr สำหรับการสังเกตทรัพยากร
+lesson.m06.l56.title|สร้างและเป็นเจ้าของ
+lesson.m06.l56.requirement|รวม std::unique_ptr และ std::make_unique สำหรับเส้นทางที่ปลอดภัย
+feedback.m06.l56.construct|เพิ่มทั้ง std::unique_ptr และ std::make_unique
+lesson.m06.l57.title|ส่งต่อเจ้าของทรัพยากร
+lesson.m06.l57.requirement|รวม std::unique_ptr และ std::move เพื่อส่งต่อเส้นทางระหว่างขั้นตอน
+feedback.m06.l57.construct|เพิ่มทั้ง std::unique_ptr และ std::move
+lesson.m06.l58.title|ป้องกันวงจรการอ้างอิง
+lesson.m06.l58.requirement|รวม std::shared_ptr และ std::weak_ptr เพื่อป้องกันวงจรของทรัพยากร
+feedback.m06.l58.construct|เพิ่มทั้ง std::shared_ptr และ std::weak_ptr
+lesson.m06.l59.title|ทรัพยากรตรวจสอบ
+lesson.m06.l59.requirement|ใช้ std::make_unique สร้างทรัพยากรสำหรับขั้นตอนตรวจสอบ
+feedback.m06.l59.construct|ใช้ std::make_unique สำหรับทรัพยากรตรวจสอบ
+lesson.m06.l60.title|ประเมินความปลอดภัยของทรัพยากร
+lesson.m06.l60.requirement|ใช้ std::unique_ptr และ std::make_unique สร้างสถานะเส้นทางที่ปลอดภัย
+feedback.m06.l60.construct|เพิ่มทั้ง std::unique_ptr และ std::make_unique สำหรับการประเมิน
