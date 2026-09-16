@@ -15,7 +15,7 @@ Every stage is 1% curriculum completion; 100% reports completion of this curricu
 | 9. Pathfinding & Optimization | 81–90 | BFS, Dijkstra, A*, heuristics, scheduling, optimization measurements |
 | 10. Software Architecture | 91–100 | interfaces, separation, testing, persistence, localization, final automation project |
 
-## v0.7 playable sequence (1–70)
+## v0.8 playable sequence (1–80)
 
 1. Start a program and issue one harvest command.
 2. Store a movement count in an integer.
@@ -87,3 +87,13 @@ Every stage is 1% curriculum completion; 100% reports completion of this curricu
 68. Combine sorting and searching for a verified route queue.
 69. Combine a template with a `requires` constraint.
 70. Complete the Module 7 templates-and-algorithms assessment.
+71. Dispatch routine route work in first-in-first-out order with `std::queue`.
+72. Roll back the latest route decision with `std::stack`.
+73. Dispatch urgent route work first with `std::priority_queue`.
+74. Add and remove route checkpoints at either end with `std::deque`.
+75. Index route metadata with `std::unordered_map`.
+76. Combine routine and priority dispatch queues.
+77. Combine a decision stack with a double-ended checkpoint queue.
+78. Map station metadata while queueing its route work.
+79. Prioritize fault recovery with `std::priority_queue`.
+80. Complete the Module 8 data-structures assessment with routine and priority route queues.

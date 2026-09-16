@@ -69,3 +69,13 @@ id|module|key|title_key|requirement_key|target_harvest|required_construct|feedba
 68|7|m07_l68|lesson.m07.l68.title|lesson.m07.l68.requirement|6|all:std::sort,std::find|feedback.m07.l68.construct
 69|7|m07_l69|lesson.m07.l69.title|lesson.m07.l69.requirement|6|all:template,requires|feedback.m07.l69.construct
 70|7|m07_l70|lesson.m07.l70.title|lesson.m07.l70.requirement|6|all:template,std::sort|feedback.m07.l70.construct
+71|8|m08_l71|lesson.m08.l71.title|lesson.m08.l71.requirement|5|std::queue|feedback.m08.l71.construct
+72|8|m08_l72|lesson.m08.l72.title|lesson.m08.l72.requirement|5|std::stack|feedback.m08.l72.construct
+73|8|m08_l73|lesson.m08.l73.title|lesson.m08.l73.requirement|5|std::priority_queue|feedback.m08.l73.construct
+74|8|m08_l74|lesson.m08.l74.title|lesson.m08.l74.requirement|5|std::deque|feedback.m08.l74.construct
+75|8|m08_l75|lesson.m08.l75.title|lesson.m08.l75.requirement|5|std::unordered_map|feedback.m08.l75.construct
+76|8|m08_l76|lesson.m08.l76.title|lesson.m08.l76.requirement|6|all:std::queue,std::priority_queue|feedback.m08.l76.construct
+77|8|m08_l77|lesson.m08.l77.title|lesson.m08.l77.requirement|6|all:std::stack,std::deque|feedback.m08.l77.construct
+78|8|m08_l78|lesson.m08.l78.title|lesson.m08.l78.requirement|6|all:std::unordered_map,std::queue|feedback.m08.l78.construct
+79|8|m08_l79|lesson.m08.l79.title|lesson.m08.l79.requirement|6|std::priority_queue|feedback.m08.l79.construct
+80|8|m08_l80|lesson.m08.l80.title|lesson.m08.l80.requirement|6|all:std::queue,std::priority_queue|feedback.m08.l80.construct

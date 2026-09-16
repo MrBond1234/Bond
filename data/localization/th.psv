@@ -213,3 +213,33 @@ feedback.m07.l69.construct|เพิ่มทั้ง template และ requir
 lesson.m07.l70.title|ประเมินเทมเพลตและอัลกอริทึม
 lesson.m07.l70.requirement|รวม template และ std::sort เพื่อจัดการเส้นทางที่ตรวจสอบได้
 feedback.m07.l70.construct|เพิ่มทั้ง template และ std::sort สำหรับการประเมิน
+lesson.m08.l71.title|คิวเส้นทางตามลำดับ
+lesson.m08.l71.requirement|ใช้ std::queue ส่งงานเส้นทางตามลำดับที่เข้ามา
+feedback.m08.l71.construct|เพิ่ม std::queue สำหรับงานเส้นทาง
+lesson.m08.l72.title|สแตกการตัดสินใจ
+lesson.m08.l72.requirement|ใช้ std::stack ย้อนกลับการตัดสินใจเส้นทางล่าสุด
+feedback.m08.l72.construct|เพิ่ม std::stack สำหรับการตัดสินใจ
+lesson.m08.l73.title|คิวงานเร่งด่วน
+lesson.m08.l73.requirement|ใช้ std::priority_queue ให้เส้นทางเร่งด่วนทำงานก่อน
+feedback.m08.l73.construct|เพิ่ม std::priority_queue สำหรับงานเร่งด่วน
+lesson.m08.l74.title|จุดตรวจสองด้าน
+lesson.m08.l74.requirement|ใช้ std::deque จัดการจุดตรวจได้ทั้งหน้าและท้าย
+feedback.m08.l74.construct|เพิ่ม std::deque สำหรับจุดตรวจ
+lesson.m08.l75.title|ดัชนีข้อมูลสถานี
+lesson.m08.l75.requirement|ใช้ std::unordered_map จัดทำดัชนีข้อมูลของสถานี
+feedback.m08.l75.construct|เพิ่ม std::unordered_map สำหรับข้อมูลสถานี
+lesson.m08.l76.title|คิวปกติและคิวเร่งด่วน
+lesson.m08.l76.requirement|รวม std::queue และ std::priority_queue สำหรับการส่งงานสองระดับ
+feedback.m08.l76.construct|เพิ่มทั้ง std::queue และ std::priority_queue
+lesson.m08.l77.title|ย้อนกลับและจุดตรวจ
+lesson.m08.l77.requirement|รวม std::stack และ std::deque เพื่อจัดการการย้อนกลับของเส้นทาง
+feedback.m08.l77.construct|เพิ่มทั้ง std::stack และ std::deque
+lesson.m08.l78.title|สถานีและคิวงาน
+lesson.m08.l78.requirement|รวม std::unordered_map และ std::queue สำหรับข้อมูลสถานีและงานรอ
+feedback.m08.l78.construct|เพิ่มทั้ง std::unordered_map และ std::queue
+lesson.m08.l79.title|กู้คืนงานเร่งด่วน
+lesson.m08.l79.requirement|ใช้ std::priority_queue จัดลำดับการกู้คืนเส้นทาง
+feedback.m08.l79.construct|ใช้ std::priority_queue สำหรับการกู้คืน
+lesson.m08.l80.title|ประเมินโครงสร้างข้อมูล
+lesson.m08.l80.requirement|ใช้ std::queue และ std::priority_queue สร้างระบบส่งงานเส้นทางที่ตรวจสอบได้
+feedback.m08.l80.construct|เพิ่มทั้ง std::queue และ std::priority_queue สำหรับการประเมิน

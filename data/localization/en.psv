@@ -213,3 +213,33 @@ feedback.m07.l69.construct|Add both template and requires.
 lesson.m07.l70.title|Template and Algorithm Assessment
 lesson.m07.l70.requirement|Combine template and std::sort to manage a verifiable route.
 feedback.m07.l70.construct|Add both template and std::sort for the assessment.
+lesson.m08.l71.title|Ordered Route Queue
+lesson.m08.l71.requirement|Use std::queue to dispatch route work in arrival order.
+feedback.m08.l71.construct|Add std::queue for route work.
+lesson.m08.l72.title|Decision Stack
+lesson.m08.l72.requirement|Use std::stack to roll back the latest route decision.
+feedback.m08.l72.construct|Add std::stack for decisions.
+lesson.m08.l73.title|Urgent Work Queue
+lesson.m08.l73.requirement|Use std::priority_queue to dispatch urgent route work first.
+feedback.m08.l73.construct|Add std::priority_queue for urgent work.
+lesson.m08.l74.title|Double-Ended Checkpoints
+lesson.m08.l74.requirement|Use std::deque to manage checkpoints at both ends.
+feedback.m08.l74.construct|Add std::deque for checkpoints.
+lesson.m08.l75.title|Station Metadata Index
+lesson.m08.l75.requirement|Use std::unordered_map to index station metadata.
+feedback.m08.l75.construct|Add std::unordered_map for station data.
+lesson.m08.l76.title|Routine and Urgent Queues
+lesson.m08.l76.requirement|Combine std::queue and std::priority_queue for two-level dispatch.
+feedback.m08.l76.construct|Add both std::queue and std::priority_queue.
+lesson.m08.l77.title|Rollback and Checkpoints
+lesson.m08.l77.requirement|Combine std::stack and std::deque to manage route rollback.
+feedback.m08.l77.construct|Add both std::stack and std::deque.
+lesson.m08.l78.title|Station and Work Queue
+lesson.m08.l78.requirement|Combine std::unordered_map and std::queue for station data and pending work.
+feedback.m08.l78.construct|Add both std::unordered_map and std::queue.
+lesson.m08.l79.title|Urgent Recovery
+lesson.m08.l79.requirement|Use std::priority_queue to order route recovery.
+feedback.m08.l79.construct|Use std::priority_queue for recovery.
+lesson.m08.l80.title|Data Structures Assessment
+lesson.m08.l80.requirement|Use std::queue and std::priority_queue for verifiable route dispatch.
+feedback.m08.l80.construct|Add both std::queue and std::priority_queue for the assessment.
