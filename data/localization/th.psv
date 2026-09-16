@@ -28,12 +28,19 @@ ui.output|ผลลัพธ์และการวิเคราะห์
 ui.run|รัน
 ui.step|ทีละขั้น
 ui.reset|เริ่มใหม่
+ui.lesson|บทเรียน
+ui.load_lesson|โหลดบทเรียน
+ui.status.invalid_lesson|ไม่พบบทเรียนที่ระบุ
 ui.status.ready|Worker แยกสำหรับการรันโค้ดพร้อมแล้ว โค้ดของผู้เรียนจะไม่ทำงานในโปรเซสของแอปพลิเคชัน
 ui.status.no_output|Worker ทำงานเสร็จโดยไม่มีข้อความวินิจฉัย
 ui.status.stepped|การจำลองดำเนินไปหนึ่งขั้นตอน
 ui.status.reset|เริ่มการจำลองของบทเรียนใหม่แล้ว
 feedback.none|ตรวจสอบข้อกำหนดของงาน แล้วรันการจำลองอีกครั้ง
 feedback.simulation.incomplete|การจำลองยังส่งพืชตามจำนวนที่กำหนดเข้าคลังไม่ครบ
+feedback.m01.l04.construct|เพิ่มคำสั่ง if เพื่อตรวจพืชก่อนเก็บเกี่ยว
+feedback.m01.l05.construct|ใช้ลูป for เพื่อทำเส้นทางเก็บเกี่ยวซ้ำ
+feedback.m01.l06.construct|ใช้ลูป while เพื่อทำเส้นทางจนถึงคลัง
+feedback.m01.l10.construct|ใช้ if เพื่อควบคุมรอบเก็บเกี่ยวอัตโนมัติ
 lesson.m02.l11.title|จุดตัดสินใจ
 lesson.m02.l11.requirement|ใช้ if เพื่อเรียกเส้นทางเก็บเกี่ยวเมื่อพบพืชเท่านั้น
 feedback.m02.l11.construct|เพิ่มคำสั่ง if เพื่อควบคุมการตัดสินใจเรื่องพืช

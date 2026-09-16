@@ -28,12 +28,19 @@ ui.output|OUTPUT & ANALYSIS
 ui.run|Run
 ui.step|Step
 ui.reset|Reset
+ui.lesson|LESSON
+ui.load_lesson|Load lesson
+ui.status.invalid_lesson|The requested lesson was not found.
 ui.status.ready|The isolated execution worker is ready. Learner code never runs inside this application process.
 ui.status.no_output|The worker completed without diagnostic output.
 ui.status.stepped|Simulation advanced by one engineering step.
 ui.status.reset|Lesson simulation reset.
 feedback.none|Review the task requirements and run the simulation again.
 feedback.simulation.incomplete|The simulation has not delivered the required harvest to the depot.
+feedback.m01.l04.construct|Add an if statement to check the crop before harvesting.
+feedback.m01.l05.construct|Use a for loop to repeat the harvest route.
+feedback.m01.l06.construct|Use a while loop to continue the route until the depot condition is met.
+feedback.m01.l10.construct|Use if to control the automated harvest cycle.
 lesson.m02.l11.title|Decision Gate
 lesson.m02.l11.requirement|Use if to dispatch a harvest route only when a crop is detected.
 feedback.m02.l11.construct|Add an if statement that guards the crop decision.

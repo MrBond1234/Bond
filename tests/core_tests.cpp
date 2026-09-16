@@ -78,6 +78,11 @@ int main() {
   expect(localizer.text("missing.key") == "missing.key", "missing localization key is visible");
   expect(localizer.load_fallback(BOND_DATA_DIR "/localization/en.psv"), "English fallback localization loads");
   expect(localizer.text("ui.status.ready") == "Worker แยกสำหรับการรันโค้ดพร้อมแล้ว โค้ดของผู้เรียนจะไม่ทำงานในโปรเซสของแอปพลิเคชัน", "Thai remains preferred over fallback");
+  for (const auto& lesson : app.campaign().lessons()) {
+    expect(localizer.text(lesson.title_key) != lesson.title_key, "every lesson title is localized");
+    expect(localizer.text(lesson.requirement_key) != lesson.requirement_key, "every lesson requirement is localized");
+    expect(localizer.text(lesson.feedback_key) != lesson.feedback_key, "every lesson feedback is localized");
+  }
 
   const auto progress_file = std::filesystem::temp_directory_path() / "bond_core_tests_progress.txt";
   const bond::Progress expected{1, {1, 3, 10}};
@@ -97,6 +102,8 @@ int main() {
   const bond::SimulationSnapshot complete{{0, 0}, 0, 1, true};
   expect(!evaluator.evaluate_source(conditional, "int main() {}", complete).passed, "evaluator rejects missing required construct");
   expect(evaluator.evaluate_source(conditional, "if (crop) {}", complete).passed, "evaluator accepts required construct and complete simulation");
+  expect(!evaluator.evaluate_source(conditional, "// if (crop) {}", complete).passed, "evaluator ignores required constructs in comments");
+  expect(!evaluator.evaluate_source(conditional, "const char* hint = \"if (crop) {}\";", complete).passed, "evaluator ignores required constructs in strings");
   expect(!evaluator.evaluate_source(conditional, "if (crop) {}", {}).passed, "evaluator requires completed simulation");
   const bond::Lesson nested{30, 3, "m03_l30", "", "", 1, "for*2", "feedback.m03.l30.construct"};
   expect(!evaluator.evaluate_source(nested, "for (;;) {}", complete).passed, "nested evaluator rejects a single loop");
