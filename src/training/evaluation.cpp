@@ -5,6 +5,27 @@
 
 namespace bond {
 namespace {
+std::string strip_comments_and_strings(std::string_view source) {
+  std::string result;
+  result.reserve(source.size());
+  for (std::size_t index{}; index < source.size();) {
+    if (index + 1 < source.size() && source[index] == '/' && source[index + 1] == '/') {
+      while (index < source.size() && source[index] != '\n') { result.push_back(' '); ++index; }
+    } else if (index + 1 < source.size() && source[index] == '/' && source[index + 1] == '*') {
+      result.append("  "); index += 2;
+      while (index + 1 < source.size() && !(source[index] == '*' && source[index + 1] == '/')) { result.push_back(' '); ++index; }
+      if (index + 1 < source.size()) { result.append("  "); index += 2; }
+    } else if (source[index] == '"' || source[index] == '\'') {
+      const char quote = source[index]; result.push_back(' '); ++index;
+      while (index < source.size()) {
+        if (source[index] == '\\' && index + 1 < source.size()) { result.append("  "); index += 2; continue; }
+        const bool closes = source[index] == quote; result.push_back(' '); ++index;
+        if (closes) break;
+      }
+    } else { result.push_back(source[index++]); }
+  }
+  return result;
+}
 bool contains_construct(std::string_view source, std::string_view construct) {
   if (construct.empty()) return true;
   constexpr std::string_view all_prefix{"all:"};
@@ -51,7 +72,8 @@ EvaluationResult LessonEvaluator::evaluate(const Lesson& lesson, const Simulatio
 EvaluationResult LessonEvaluator::evaluate_source(const Lesson& lesson, std::string_view source,
                                                   const SimulationSnapshot& snapshot) const {
   EvaluationResult result;
-  const bool construct_ok = contains_construct(source, lesson.required_construct);
+  const auto inspected_source = strip_comments_and_strings(source);
+  const bool construct_ok = contains_construct(inspected_source, lesson.required_construct);
   const bool simulation_ok = snapshot.complete && snapshot.harvested >= lesson.target_harvest;
   result.passed = construct_ok && simulation_ok;
   result.score = result.passed ? 100 : (construct_ok ? 50 : 0);

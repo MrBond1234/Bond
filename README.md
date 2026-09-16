@@ -1,10 +1,10 @@
 # Bond Automation Training
 
-A Windows-first C++20 automation-training simulator. Version 1.0 supplies a native engineering workbench, deterministic multi-row simulation, a Thai-first 100-lesson campaign, source-level evaluation, and a separate execution worker.
+A Windows-first C++20 automation-training simulator. Version 1.1 supplies a native engineering workbench, deterministic multi-row simulation, a Thai-first 100-lesson campaign, source-level evaluation, a separate execution worker, and a final-project guide.
 
 ## Status
 
-The workbench uses native Win32 controls to keep the dependency footprint small: simulation, C++ editor, task/requirements, output/analysis, and Run/Step/Reset controls. The UI is intentionally an IDE/PLC-style training workspace rather than a game.
+The workbench uses native Win32 controls to keep the dependency footprint small: simulation, C++ editor, task/requirements, output/analysis, lesson selection, and Run/Step/Reset controls. The UI is intentionally an IDE/PLC-style training workspace rather than a game. See `docs/final_project.md` for the capstone deliverable and review rubric.
 
 ## Prerequisites
 
