@@ -1,0 +1,11 @@
+id|module|key|title_key|requirement_key|target_harvest
+1|1|m01_l01|lesson.m01.l01.title|lesson.m01.l01.requirement|1
+2|1|m01_l02|lesson.m01.l02.title|lesson.m01.l02.requirement|1
+3|1|m01_l03|lesson.m01.l03.title|lesson.m01.l03.requirement|2
+4|1|m01_l04|lesson.m01.l04.title|lesson.m01.l04.requirement|2
+5|1|m01_l05|lesson.m01.l05.title|lesson.m01.l05.requirement|2
+6|1|m01_l06|lesson.m01.l06.title|lesson.m01.l06.requirement|3
+7|1|m01_l07|lesson.m01.l07.title|lesson.m01.l07.requirement|3
+8|1|m01_l08|lesson.m01.l08.title|lesson.m01.l08.requirement|3
+9|1|m01_l09|lesson.m01.l09.title|lesson.m01.l09.requirement|4
+10|1|m01_l10|lesson.m01.l10.title|lesson.m01.l10.requirement|4

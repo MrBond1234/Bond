@@ -1,0 +1,5 @@
+key|text
+app.title|Bond Automation Training
+lesson.m01.l01.title|เริ่มต้นระบบเก็บเกี่ยว
+lesson.m01.l01.requirement|เขียนคำสั่งให้หุ่นยนต์เก็บพืช 1 หน่วยและส่งเข้าคลัง
+daily.harvest|ภารกิจประจำวัน: เก็บเกี่ยวตามจำนวนที่กำหนด

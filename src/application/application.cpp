@@ -1,0 +1,2 @@
+#include "bond/application.hpp"
+namespace bond { bool Application::initialize(const std::filesystem::path& lesson_file) { return campaign_.load(lesson_file); } bool Application::start_lesson(int id) { const auto lesson=campaign_.find(id); if(!lesson) return false; simulation_.reset(lesson->target_harvest); return true; } }

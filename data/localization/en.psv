@@ -1,0 +1,5 @@
+key|text
+app.title|Bond Automation Training
+lesson.m01.l01.title|First Harvest System
+lesson.m01.l01.requirement|Program the robot to harvest one crop and deliver it to the depot.
+daily.harvest|Daily exercise: harvest the requested quantity.
